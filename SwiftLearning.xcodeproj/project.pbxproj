@@ -7,10 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8C2BD21A1BCFEF94004E7302 /* MajorityClassifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C2BD2191BCFEF94004E7302 /* MajorityClassifier.swift */; settings = {ASSET_TAGS = (); }; };
+		8C2BD21D1BCFF0F1004E7302 /* FeatureVector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C2BD21C1BCFF0F1004E7302 /* FeatureVector.swift */; settings = {ASSET_TAGS = (); }; };
+		8C2BD2211BCFF417004E7302 /* FeatureVectorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C2BD2201BCFF417004E7302 /* FeatureVectorTests.swift */; settings = {ASSET_TAGS = (); }; };
 		8C8916C11BCFED4C00A77184 /* SwiftLearning.h in Headers */ = {isa = PBXBuildFile; fileRef = 8C8916C01BCFED4C00A77184 /* SwiftLearning.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8C8916C81BCFED4D00A77184 /* SwiftLearning.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C8916BD1BCFED4C00A77184 /* SwiftLearning.framework */; settings = {ASSET_TAGS = (); }; };
 		8C8916CD1BCFED4D00A77184 /* SwiftLearningTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C8916CC1BCFED4D00A77184 /* SwiftLearningTests.swift */; };
-		8C8916D81BCFED7600A77184 /* TestFiled.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C8916D71BCFED7600A77184 /* TestFiled.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -24,13 +26,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8C2BD2191BCFEF94004E7302 /* MajorityClassifier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MajorityClassifier.swift; sourceTree = "<group>"; };
+		8C2BD21C1BCFF0F1004E7302 /* FeatureVector.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeatureVector.swift; sourceTree = "<group>"; };
+		8C2BD2201BCFF417004E7302 /* FeatureVectorTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeatureVectorTests.swift; sourceTree = "<group>"; };
 		8C8916BD1BCFED4C00A77184 /* SwiftLearning.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftLearning.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8C8916C01BCFED4C00A77184 /* SwiftLearning.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SwiftLearning.h; sourceTree = "<group>"; };
 		8C8916C21BCFED4C00A77184 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8C8916C71BCFED4D00A77184 /* SwiftLearningTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftLearningTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8C8916CC1BCFED4D00A77184 /* SwiftLearningTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftLearningTests.swift; sourceTree = "<group>"; };
 		8C8916CE1BCFED4D00A77184 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		8C8916D71BCFED7600A77184 /* TestFiled.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestFiled.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +56,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8C2BD21B1BCFF00F004E7302 /* Classifiers */ = {
+			isa = PBXGroup;
+			children = (
+				8C2BD2191BCFEF94004E7302 /* MajorityClassifier.swift */,
+			);
+			name = Classifiers;
+			sourceTree = "<group>";
+		};
 		8C8916B31BCFED4C00A77184 = {
 			isa = PBXGroup;
 			children = (
@@ -74,7 +86,8 @@
 			isa = PBXGroup;
 			children = (
 				8C8916C01BCFED4C00A77184 /* SwiftLearning.h */,
-				8C8916D71BCFED7600A77184 /* TestFiled.swift */,
+				8C2BD21C1BCFF0F1004E7302 /* FeatureVector.swift */,
+				8C2BD21B1BCFF00F004E7302 /* Classifiers */,
 				8C8916C21BCFED4C00A77184 /* Info.plist */,
 			);
 			path = SwiftLearning;
@@ -84,6 +97,7 @@
 			isa = PBXGroup;
 			children = (
 				8C8916CC1BCFED4D00A77184 /* SwiftLearningTests.swift */,
+				8C2BD2201BCFF417004E7302 /* FeatureVectorTests.swift */,
 				8C8916CE1BCFED4D00A77184 /* Info.plist */,
 			);
 			path = SwiftLearningTests;
@@ -197,7 +211,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8C8916D81BCFED7600A77184 /* TestFiled.swift in Sources */,
+				8C2BD21D1BCFF0F1004E7302 /* FeatureVector.swift in Sources */,
+				8C2BD21A1BCFEF94004E7302 /* MajorityClassifier.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -206,6 +221,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8C8916CD1BCFED4D00A77184 /* SwiftLearningTests.swift in Sources */,
+				8C2BD2211BCFF417004E7302 /* FeatureVectorTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -383,6 +399,7 @@
 				8C8916D31BCFED4D00A77184 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8C8916D41BCFED4D00A77184 /* Build configuration list for PBXNativeTarget "SwiftLearningTests" */ = {
 			isa = XCConfigurationList;
@@ -391,6 +408,7 @@
 				8C8916D61BCFED4D00A77184 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
