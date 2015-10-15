@@ -10,6 +10,7 @@
 		8C8916C11BCFED4C00A77184 /* SwiftLearning.h in Headers */ = {isa = PBXBuildFile; fileRef = 8C8916C01BCFED4C00A77184 /* SwiftLearning.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8C8916C81BCFED4D00A77184 /* SwiftLearning.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C8916BD1BCFED4C00A77184 /* SwiftLearning.framework */; settings = {ASSET_TAGS = (); }; };
 		8C8916CD1BCFED4D00A77184 /* SwiftLearningTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C8916CC1BCFED4D00A77184 /* SwiftLearningTests.swift */; };
+		8C8916D81BCFED7600A77184 /* TestFiled.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C8916D71BCFED7600A77184 /* TestFiled.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +30,7 @@
 		8C8916C71BCFED4D00A77184 /* SwiftLearningTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftLearningTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8C8916CC1BCFED4D00A77184 /* SwiftLearningTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftLearningTests.swift; sourceTree = "<group>"; };
 		8C8916CE1BCFED4D00A77184 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8C8916D71BCFED7600A77184 /* TestFiled.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestFiled.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +74,7 @@
 			isa = PBXGroup;
 			children = (
 				8C8916C01BCFED4C00A77184 /* SwiftLearning.h */,
+				8C8916D71BCFED7600A77184 /* TestFiled.swift */,
 				8C8916C21BCFED4C00A77184 /* Info.plist */,
 			);
 			path = SwiftLearning;
@@ -142,6 +145,7 @@
 		8C8916B41BCFED4C00A77184 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0700;
 				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = "Clayton Minicus";
 				TargetAttributes = {
@@ -193,6 +197,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8C8916D81BCFED7600A77184 /* TestFiled.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -307,6 +312,7 @@
 		8C8916D21BCFED4D00A77184 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -317,12 +323,14 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.claytonminicus.SwiftLearning;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
 		8C8916D31BCFED4D00A77184 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
