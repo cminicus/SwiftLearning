@@ -37,9 +37,9 @@ class FeatureVectorTests: XCTestCase {
         
         
         
-        let dataReader = DataReader(fileName: "speech_test.txt")
-        dataReader.readData()
-        
+        let dataReader = DataReader(fileName: "speech")
+        let instances = dataReader.readData()
+        let x = 4
     }
     
     func testThatFeatureVectorRemainsSortedByKeys() {

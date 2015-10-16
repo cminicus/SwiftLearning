@@ -18,32 +18,45 @@ public class DataReader {
     
     public func readData() -> [Instance] {
         
-        let path2 = NSBundle.mainBundle().pathForResource("speech_test", ofType: "txt")
+        guard let frameworkBundle = NSBundle(identifier: "com.claytonminicus.SwiftLearning") else {
+            return []
+        }
         
-        guard let path = NSBundle.mainBundle().pathForResource(fileName, ofType: "txt") else {
+        guard let path = frameworkBundle.pathForResource(fileName, ofType: "train") else {
             return []
         }
 
-//        let content = String(
-        
-//        guard let path = NSBundle.mainBundle().pathForResource(fileName, ofType: "txt") else {
-//            return nil
-//        }
-        
         do {
             let content = try String(contentsOfFile:path, encoding: NSUTF8StringEncoding)
-            
             let contentArray = content.componentsSeparatedByString("\n")
             
-            print(contentArray)
+            var instances = [Instance]()
             
-//            return content.componentsSeparatedByString("\n")
+            for instanceString in contentArray {
+                let splitLine = instanceString.componentsSeparatedByString(" ")
+//                splitLine.strin
+                
+                
+                
+                let label = Int(splitLine.first!)!
+                let featureVector = FeatureVector()
+                
+                for i in 1..<splitLine.count {
+                    let feature = splitLine[i]
+                    let keyAndValue = feature.componentsSeparatedByString(":")
+                    let key = keyAndValue.first!
+                    let value = keyAndValue.last!
+                    featureVector.append(Int(key)!, value: Double(value)!)
+                }
+                instances.append(Instance(featureVector: featureVector, label: label))
+                print(Float(instances.count) / Float(contentArray.count))
+            }
+            
+            return instances
+            
         } catch _ as NSError {
             return []
         }
-        
-        
-        return []
     }
     
 }

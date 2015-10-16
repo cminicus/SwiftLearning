@@ -39,13 +39,17 @@ public class FeatureVector {
         map.append((key, value))
     }
     
+    public func append(key: Int, value: Double) {
+        map.append((key, value))
+    }
+    
     /**
     Gets the array of all keys in feature vector
     
     - returns: Array of sorted keys
     */
     public func keyArray() -> [Int] {
-        return map.map { return $0.0 }
+        return map.map { return $0.0 }        
     }
     
     /**

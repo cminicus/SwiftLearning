@@ -13,7 +13,7 @@
 		8C15BDDA1BD074C100C595BA /* MajorityClassifierTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C15BDD91BD074C100C595BA /* MajorityClassifierTests.swift */; settings = {ASSET_TAGS = (); }; };
 		8C15BDDC1BD074EF00C595BA /* ClassifierBaseTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C15BDDB1BD074EF00C595BA /* ClassifierBaseTest.swift */; settings = {ASSET_TAGS = (); }; };
 		8C15BDDF1BD078CD00C595BA /* DataReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C15BDDE1BD078CD00C595BA /* DataReader.swift */; settings = {ASSET_TAGS = (); }; };
-		8C15BDE31BD07C0700C595BA /* speech_test.txt in Resources */ = {isa = PBXBuildFile; fileRef = 8C15BDE21BD07C0700C595BA /* speech_test.txt */; settings = {ASSET_TAGS = (); }; };
+		8C15BDE31BD07C0700C595BA /* speech.train in Resources */ = {isa = PBXBuildFile; fileRef = 8C15BDE21BD07C0700C595BA /* speech.train */; settings = {ASSET_TAGS = (); }; };
 		8C2BD21A1BCFEF94004E7302 /* MajorityClassifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C2BD2191BCFEF94004E7302 /* MajorityClassifier.swift */; settings = {ASSET_TAGS = (); }; };
 		8C2BD21D1BCFF0F1004E7302 /* FeatureVector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C2BD21C1BCFF0F1004E7302 /* FeatureVector.swift */; settings = {ASSET_TAGS = (); }; };
 		8C2BD2211BCFF417004E7302 /* FeatureVectorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C2BD2201BCFF417004E7302 /* FeatureVectorTests.swift */; settings = {ASSET_TAGS = (); }; };
@@ -38,7 +38,7 @@
 		8C15BDD91BD074C100C595BA /* MajorityClassifierTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MajorityClassifierTests.swift; sourceTree = "<group>"; };
 		8C15BDDB1BD074EF00C595BA /* ClassifierBaseTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClassifierBaseTest.swift; sourceTree = "<group>"; };
 		8C15BDDE1BD078CD00C595BA /* DataReader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataReader.swift; sourceTree = "<group>"; };
-		8C15BDE21BD07C0700C595BA /* speech_test.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = speech_test.txt; sourceTree = "<group>"; };
+		8C15BDE21BD07C0700C595BA /* speech.train */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = speech.train; sourceTree = "<group>"; };
 		8C2BD2191BCFEF94004E7302 /* MajorityClassifier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MajorityClassifier.swift; sourceTree = "<group>"; };
 		8C2BD21C1BCFF0F1004E7302 /* FeatureVector.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeatureVector.swift; sourceTree = "<group>"; };
 		8C2BD2201BCFF417004E7302 /* FeatureVectorTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeatureVectorTests.swift; sourceTree = "<group>"; };
@@ -113,7 +113,7 @@
 				8C15BDDE1BD078CD00C595BA /* DataReader.swift */,
 				8C2BD21B1BCFF00F004E7302 /* Classifiers */,
 				8C8916C21BCFED4C00A77184 /* Info.plist */,
-				8C15BDE21BD07C0700C595BA /* speech_test.txt */,
+				8C15BDE21BD07C0700C595BA /* speech.train */,
 			);
 			path = SwiftLearning;
 			sourceTree = "<group>";
@@ -220,7 +220,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8C15BDE31BD07C0700C595BA /* speech_test.txt in Resources */,
+				8C15BDE31BD07C0700C595BA /* speech.train in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
