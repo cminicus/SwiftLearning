@@ -8,7 +8,7 @@
 
 import Foundation
 
-protocol Classifier {
+public protocol Classifier {
     func train(instances: [Instance])
     func predict(instance: Instance) -> Int
 }

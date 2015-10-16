@@ -19,6 +19,9 @@
 		8C2BD2211BCFF417004E7302 /* FeatureVectorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C2BD2201BCFF417004E7302 /* FeatureVectorTests.swift */; settings = {ASSET_TAGS = (); }; };
 		8C8916C11BCFED4C00A77184 /* SwiftLearning.h in Headers */ = {isa = PBXBuildFile; fileRef = 8C8916C01BCFED4C00A77184 /* SwiftLearning.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8C8916C81BCFED4D00A77184 /* SwiftLearning.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C8916BD1BCFED4C00A77184 /* SwiftLearning.framework */; settings = {ASSET_TAGS = (); }; };
+		8C9841F51BD08B1E0051CBEB /* AccuracyEvaluator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C9841F41BD08B1E0051CBEB /* AccuracyEvaluator.swift */; settings = {ASSET_TAGS = (); }; };
+		8C9841F71BD08C8B0051CBEB /* speech.test in Resources */ = {isa = PBXBuildFile; fileRef = 8C9841F61BD08C8B0051CBEB /* speech.test */; settings = {ASSET_TAGS = (); }; };
+		8C9841F91BD08EF40051CBEB /* EvenOddClassifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C9841F81BD08EF40051CBEB /* EvenOddClassifier.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +50,9 @@
 		8C8916C21BCFED4C00A77184 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8C8916C71BCFED4D00A77184 /* SwiftLearningTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftLearningTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8C8916CE1BCFED4D00A77184 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8C9841F41BD08B1E0051CBEB /* AccuracyEvaluator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccuracyEvaluator.swift; sourceTree = "<group>"; };
+		8C9841F61BD08C8B0051CBEB /* speech.test */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = speech.test; sourceTree = "<group>"; };
+		8C9841F81BD08EF40051CBEB /* EvenOddClassifier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EvenOddClassifier.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +88,7 @@
 			children = (
 				8C15BDD71BD0720600C595BA /* Classifier.swift */,
 				8C2BD2191BCFEF94004E7302 /* MajorityClassifier.swift */,
+				8C9841F81BD08EF40051CBEB /* EvenOddClassifier.swift */,
 			);
 			name = Classifiers;
 			sourceTree = "<group>";
@@ -111,9 +118,11 @@
 				8C2BD21C1BCFF0F1004E7302 /* FeatureVector.swift */,
 				8C15BDD31BD06F8100C595BA /* Instance.swift */,
 				8C15BDDE1BD078CD00C595BA /* DataReader.swift */,
+				8C9841F41BD08B1E0051CBEB /* AccuracyEvaluator.swift */,
 				8C2BD21B1BCFF00F004E7302 /* Classifiers */,
 				8C8916C21BCFED4C00A77184 /* Info.plist */,
 				8C15BDE21BD07C0700C595BA /* speech.train */,
+				8C9841F61BD08C8B0051CBEB /* speech.test */,
 			);
 			path = SwiftLearning;
 			sourceTree = "<group>";
@@ -221,6 +230,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8C15BDE31BD07C0700C595BA /* speech.train in Resources */,
+				8C9841F71BD08C8B0051CBEB /* speech.test in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -238,10 +248,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8C9841F91BD08EF40051CBEB /* EvenOddClassifier.swift in Sources */,
 				8C15BDD81BD0720600C595BA /* Classifier.swift in Sources */,
 				8C15BDDF1BD078CD00C595BA /* DataReader.swift in Sources */,
 				8C2BD21D1BCFF0F1004E7302 /* FeatureVector.swift in Sources */,
 				8C2BD21A1BCFEF94004E7302 /* MajorityClassifier.swift in Sources */,
+				8C9841F51BD08B1E0051CBEB /* AccuracyEvaluator.swift in Sources */,
 				8C15BDD41BD06F8100C595BA /* Instance.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -368,6 +380,7 @@
 				INFOPLIST_FILE = SwiftLearning/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				OTHER_SWIFT_FLAGS = "-O";
 				PRODUCT_BUNDLE_IDENTIFIER = com.claytonminicus.SwiftLearning;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -386,6 +399,7 @@
 				INFOPLIST_FILE = SwiftLearning/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				OTHER_SWIFT_FLAGS = "-O";
 				PRODUCT_BUNDLE_IDENTIFIER = com.claytonminicus.SwiftLearning;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;

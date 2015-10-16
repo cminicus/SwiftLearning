@@ -16,7 +16,7 @@ public class MajorityClassifier: Classifier {
     
     private var prediction: Int!
     
-    func train(instances: [Instance]) {
+    public func train(instances: [Instance]) {
         var ones = 0
         var zeros = 0
         
@@ -32,7 +32,7 @@ public class MajorityClassifier: Classifier {
         self.prediction = zeros > ones ? 0 : 1
     }
     
-    func predict(instance: Instance) -> Int {
+    public func predict(instance: Instance) -> Int {
         return self.prediction
     }
 }

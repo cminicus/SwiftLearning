@@ -21,16 +21,32 @@ class MajorityClassifierTests: ClassifierBaseTest {
         super.tearDown()
     }
 
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-    }
-
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
+    func testThatMajorityClassifierIsAccurate() {
+//        self.measureBlock {
+//            let majorityClassifier = MajorityClassifier()
+//            majorityClassifier.train(self.trainInstances)
+//        }
+        
+        let majorityClassifier = MajorityClassifier()
+        majorityClassifier.train(self.trainInstances)
+        
+        let evaluator = AccuracyEvaluator()
+        let correct = evaluator.evaluate(self.testInstances, classifier: majorityClassifier)
+        
+        XCTAssertTrue(correct > 0.5)
+        
         self.measureBlock {
-            // Put the code you want to measure the time of here.
+            let c = EvenOddClassifier()
+            c.train(self.trainInstances)
         }
+        // lol takes .293 seconds if adding -O (not zero) flag in build settings (other swift flags)
+        
+//        let c = EvenOddClassifier()
+//        c.train(self.trainInstances) // takes about 43 seconds...
+//        
+//        let y = evaluator.evaluate(self.testInstances, classifier: c)
+//        _ = 6
+        
     }
 
 }

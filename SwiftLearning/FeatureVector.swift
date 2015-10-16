@@ -49,7 +49,7 @@ public class FeatureVector {
     - returns: Array of sorted keys
     */
     public func keyArray() -> [Int] {
-        return map.map { return $0.0 }        
+        return map.map { return $0.0 }
     }
     
     /**

@@ -16,7 +16,7 @@ public class DataReader {
         self.fileName = fileName
     }
     
-    public func readData() -> [Instance] {
+    public func readTrainData() -> [Instance] {
         
         guard let frameworkBundle = NSBundle(identifier: "com.claytonminicus.SwiftLearning") else {
             return []
@@ -34,10 +34,9 @@ public class DataReader {
             
             for instanceString in contentArray {
                 let splitLine = instanceString.componentsSeparatedByString(" ")
-//                splitLine.strin
-                
-                
-                
+                if splitLine.count == 1 {
+                    continue
+                }
                 let label = Int(splitLine.first!)!
                 let featureVector = FeatureVector()
                 
@@ -47,6 +46,48 @@ public class DataReader {
                     let key = keyAndValue.first!
                     let value = keyAndValue.last!
                     featureVector.append(Int(key)!, value: Double(value)!)
+                }
+                instances.append(Instance(featureVector: featureVector, label: label))
+                print(Float(instances.count) / Float(contentArray.count))
+            }
+            
+            return instances
+            
+        } catch _ as NSError {
+            return []
+        }
+    }
+    
+    public func readTestData() -> [Instance] {
+        guard let frameworkBundle = NSBundle(identifier: "com.claytonminicus.SwiftLearning") else {
+            return []
+        }
+        
+        guard let path = frameworkBundle.pathForResource(fileName, ofType: "test") else {
+            return []
+        }
+        
+        do {
+            let content = try String(contentsOfFile:path, encoding: NSUTF8StringEncoding)
+            let contentArray = content.componentsSeparatedByString("\n")
+            
+            var instances = [Instance]()
+            
+            for instanceString in contentArray {
+                let splitLine = instanceString.componentsSeparatedByString(" ")
+                if splitLine.count == 1 {
+                    continue
+                }
+                let label = Int(splitLine.first!)!
+                let featureVector = FeatureVector()
+                
+                for i in 1..<splitLine.count {
+                    let feature = splitLine[i]
+                    let keyAndValue = feature.componentsSeparatedByString(":")
+                    let key = keyAndValue.first!
+                    let value = keyAndValue.last!
+//                    featureVector.append(Int(key)!, value: Double(value)!)
+                    featureVector.add(Int(key)!, value: Double(value)!)
                 }
                 instances.append(Instance(featureVector: featureVector, label: label))
                 print(Float(instances.count) / Float(contentArray.count))
