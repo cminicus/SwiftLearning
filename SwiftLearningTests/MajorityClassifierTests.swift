@@ -33,12 +33,12 @@ class MajorityClassifierTests: ClassifierBaseTest {
         let evaluator = AccuracyEvaluator()
         let correct = evaluator.evaluate(self.testInstances, classifier: majorityClassifier)
         
-        XCTAssertTrue(correct > 0.5)
+        XCTAssertTrue(correct > 50.0)
         
-        self.measureBlock {
-            let c = EvenOddClassifier()
-            c.train(self.trainInstances)
-        }
+//        self.measureBlock {
+//            let c = EvenOddClassifier()
+//            c.train(self.trainInstances)
+//        }
         // lol takes .293 seconds if adding -O (not zero) flag in build settings (other swift flags)
         
 //        let c = EvenOddClassifier()
@@ -47,6 +47,12 @@ class MajorityClassifierTests: ClassifierBaseTest {
 //        let y = evaluator.evaluate(self.testInstances, classifier: c)
 //        _ = 6
         
+//        self.measureBlock {
+            let c = LogisticRegressionClassifier()
+            c.train(self.trainInstances)
+//        }
+        let y = evaluator.evaluate(self.testInstances, classifier: c)
+        let x = 4
     }
 
 }

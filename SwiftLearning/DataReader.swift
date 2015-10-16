@@ -45,10 +45,10 @@ public class DataReader {
                     let keyAndValue = feature.componentsSeparatedByString(":")
                     let key = keyAndValue.first!
                     let value = keyAndValue.last!
-                    featureVector.append(Int(key)!, value: Double(value)!)
+                    featureVector.add(Int(key)!, value: Double(value)!)
                 }
                 instances.append(Instance(featureVector: featureVector, label: label))
-                print(Float(instances.count) / Float(contentArray.count))
+                print(Float(instances.count) / Float(contentArray.count) * 100)
             }
             
             return instances
@@ -86,11 +86,10 @@ public class DataReader {
                     let keyAndValue = feature.componentsSeparatedByString(":")
                     let key = keyAndValue.first!
                     let value = keyAndValue.last!
-//                    featureVector.append(Int(key)!, value: Double(value)!)
                     featureVector.add(Int(key)!, value: Double(value)!)
                 }
                 instances.append(Instance(featureVector: featureVector, label: label))
-                print(Float(instances.count) / Float(contentArray.count))
+                print(Float(instances.count) / Float(contentArray.count) * 100)
             }
             
             return instances

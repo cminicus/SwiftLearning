@@ -31,7 +31,7 @@ public class EvenOddClassifier: Classifier {
                 }
             }
             current++
-            print(current / total)
+            print((current / total) * 100)
         }
         
         self.prediction = evenSum >= oddSum ? 1 : 0

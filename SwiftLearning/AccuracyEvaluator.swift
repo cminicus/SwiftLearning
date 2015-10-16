@@ -20,7 +20,7 @@ public class AccuracyEvaluator {
                 correct++
             }
         }
-        return Double(correct) / Double(total)
+        return Double(correct) / Double(total) * 100
     }
     
 }

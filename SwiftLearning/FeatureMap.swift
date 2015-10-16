@@ -1,15 +1,14 @@
 //
-//  FeatureVector.swift
+//  FeatureMap.swift
 //  SwiftLearning
 //
-//  Created by Clayton Minicus on 10/15/15.
+//  Created by Clayton Minicus on 10/16/15.
 //  Copyright © 2015 Clayton Minicus. All rights reserved.
 //
 
 import Foundation
 
-
-public class FeatureVector {
+public class FeatureMap {
     
     /// Internal "hash map" to hold key, value pairs
     private var map = [(Int, Double)]()
@@ -65,6 +64,25 @@ public class FeatureVector {
     }
     
     /**
+    Updates the value for the given key or adds it if not present
+    
+    - parameter key:   The key for which to update
+    - parameter value: The value to replace the old value with
+    */
+    public func put(key: Int, value: Double) {
+        var i = 0
+        for (mapKey, value) in map {
+            if key == mapKey {
+                map.removeAtIndex(i)
+                map.insert((key, value), atIndex: i)
+                return
+            }
+            i++
+        }
+        add(key, value: value)
+    }
+    
+    /**
     Checks where the feature vector contains the given key
     
     - parameter key: The key to check the feature  vector for
@@ -79,4 +97,5 @@ public class FeatureVector {
         }
         return false
     }
+    
 }
