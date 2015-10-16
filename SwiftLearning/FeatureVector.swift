@@ -48,6 +48,13 @@ public class FeatureVector {
         return map.map { return $0.0 }
     }
     
+    /**
+    Gets a value for the given key from internal map
+    
+    - parameter key: They key for which to get the value
+    
+    - returns: The value if found, nil otherwise
+    */
     public func get(key: Int) -> Double? {
         for (mapKey, value) in map {
             if key == mapKey {

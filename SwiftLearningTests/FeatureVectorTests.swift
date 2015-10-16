@@ -34,6 +34,12 @@ class FeatureVectorTests: XCTestCase {
         
         // then
         XCTAssertEqual(featureVector.keyArray(), [])
+        
+        
+        
+        let dataReader = DataReader(fileName: "speech_test.txt")
+        dataReader.readData()
+        
     }
     
     func testThatFeatureVectorRemainsSortedByKeys() {

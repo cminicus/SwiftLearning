@@ -7,12 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8C15BDD41BD06F8100C595BA /* Instance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C15BDD31BD06F8100C595BA /* Instance.swift */; settings = {ASSET_TAGS = (); }; };
+		8C15BDD61BD070E400C595BA /* InstanceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C15BDD51BD070E400C595BA /* InstanceTests.swift */; settings = {ASSET_TAGS = (); }; };
+		8C15BDD81BD0720600C595BA /* Classifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C15BDD71BD0720600C595BA /* Classifier.swift */; settings = {ASSET_TAGS = (); }; };
+		8C15BDDA1BD074C100C595BA /* MajorityClassifierTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C15BDD91BD074C100C595BA /* MajorityClassifierTests.swift */; settings = {ASSET_TAGS = (); }; };
+		8C15BDDC1BD074EF00C595BA /* ClassifierBaseTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C15BDDB1BD074EF00C595BA /* ClassifierBaseTest.swift */; settings = {ASSET_TAGS = (); }; };
+		8C15BDDF1BD078CD00C595BA /* DataReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C15BDDE1BD078CD00C595BA /* DataReader.swift */; settings = {ASSET_TAGS = (); }; };
+		8C15BDE31BD07C0700C595BA /* speech_test.txt in Resources */ = {isa = PBXBuildFile; fileRef = 8C15BDE21BD07C0700C595BA /* speech_test.txt */; settings = {ASSET_TAGS = (); }; };
 		8C2BD21A1BCFEF94004E7302 /* MajorityClassifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C2BD2191BCFEF94004E7302 /* MajorityClassifier.swift */; settings = {ASSET_TAGS = (); }; };
 		8C2BD21D1BCFF0F1004E7302 /* FeatureVector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C2BD21C1BCFF0F1004E7302 /* FeatureVector.swift */; settings = {ASSET_TAGS = (); }; };
 		8C2BD2211BCFF417004E7302 /* FeatureVectorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C2BD2201BCFF417004E7302 /* FeatureVectorTests.swift */; settings = {ASSET_TAGS = (); }; };
 		8C8916C11BCFED4C00A77184 /* SwiftLearning.h in Headers */ = {isa = PBXBuildFile; fileRef = 8C8916C01BCFED4C00A77184 /* SwiftLearning.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8C8916C81BCFED4D00A77184 /* SwiftLearning.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C8916BD1BCFED4C00A77184 /* SwiftLearning.framework */; settings = {ASSET_TAGS = (); }; };
-		8C8916CD1BCFED4D00A77184 /* SwiftLearningTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C8916CC1BCFED4D00A77184 /* SwiftLearningTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -26,6 +32,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8C15BDD31BD06F8100C595BA /* Instance.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Instance.swift; sourceTree = "<group>"; };
+		8C15BDD51BD070E400C595BA /* InstanceTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InstanceTests.swift; sourceTree = "<group>"; };
+		8C15BDD71BD0720600C595BA /* Classifier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Classifier.swift; sourceTree = "<group>"; };
+		8C15BDD91BD074C100C595BA /* MajorityClassifierTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MajorityClassifierTests.swift; sourceTree = "<group>"; };
+		8C15BDDB1BD074EF00C595BA /* ClassifierBaseTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClassifierBaseTest.swift; sourceTree = "<group>"; };
+		8C15BDDE1BD078CD00C595BA /* DataReader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataReader.swift; sourceTree = "<group>"; };
+		8C15BDE21BD07C0700C595BA /* speech_test.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = speech_test.txt; sourceTree = "<group>"; };
 		8C2BD2191BCFEF94004E7302 /* MajorityClassifier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MajorityClassifier.swift; sourceTree = "<group>"; };
 		8C2BD21C1BCFF0F1004E7302 /* FeatureVector.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeatureVector.swift; sourceTree = "<group>"; };
 		8C2BD2201BCFF417004E7302 /* FeatureVectorTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeatureVectorTests.swift; sourceTree = "<group>"; };
@@ -33,7 +46,6 @@
 		8C8916C01BCFED4C00A77184 /* SwiftLearning.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SwiftLearning.h; sourceTree = "<group>"; };
 		8C8916C21BCFED4C00A77184 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8C8916C71BCFED4D00A77184 /* SwiftLearningTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftLearningTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		8C8916CC1BCFED4D00A77184 /* SwiftLearningTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftLearningTests.swift; sourceTree = "<group>"; };
 		8C8916CE1BCFED4D00A77184 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -56,9 +68,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8C15BDDD1BD0752B00C595BA /* ClassifierTests */ = {
+			isa = PBXGroup;
+			children = (
+				8C15BDDB1BD074EF00C595BA /* ClassifierBaseTest.swift */,
+				8C15BDD91BD074C100C595BA /* MajorityClassifierTests.swift */,
+			);
+			name = ClassifierTests;
+			sourceTree = "<group>";
+		};
 		8C2BD21B1BCFF00F004E7302 /* Classifiers */ = {
 			isa = PBXGroup;
 			children = (
+				8C15BDD71BD0720600C595BA /* Classifier.swift */,
 				8C2BD2191BCFEF94004E7302 /* MajorityClassifier.swift */,
 			);
 			name = Classifiers;
@@ -87,8 +109,11 @@
 			children = (
 				8C8916C01BCFED4C00A77184 /* SwiftLearning.h */,
 				8C2BD21C1BCFF0F1004E7302 /* FeatureVector.swift */,
+				8C15BDD31BD06F8100C595BA /* Instance.swift */,
+				8C15BDDE1BD078CD00C595BA /* DataReader.swift */,
 				8C2BD21B1BCFF00F004E7302 /* Classifiers */,
 				8C8916C21BCFED4C00A77184 /* Info.plist */,
+				8C15BDE21BD07C0700C595BA /* speech_test.txt */,
 			);
 			path = SwiftLearning;
 			sourceTree = "<group>";
@@ -96,8 +121,9 @@
 		8C8916CB1BCFED4D00A77184 /* SwiftLearningTests */ = {
 			isa = PBXGroup;
 			children = (
-				8C8916CC1BCFED4D00A77184 /* SwiftLearningTests.swift */,
 				8C2BD2201BCFF417004E7302 /* FeatureVectorTests.swift */,
+				8C15BDD51BD070E400C595BA /* InstanceTests.swift */,
+				8C15BDDD1BD0752B00C595BA /* ClassifierTests */,
 				8C8916CE1BCFED4D00A77184 /* Info.plist */,
 			);
 			path = SwiftLearningTests;
@@ -194,6 +220,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8C15BDE31BD07C0700C595BA /* speech_test.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -211,8 +238,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8C15BDD81BD0720600C595BA /* Classifier.swift in Sources */,
+				8C15BDDF1BD078CD00C595BA /* DataReader.swift in Sources */,
 				8C2BD21D1BCFF0F1004E7302 /* FeatureVector.swift in Sources */,
 				8C2BD21A1BCFEF94004E7302 /* MajorityClassifier.swift in Sources */,
+				8C15BDD41BD06F8100C595BA /* Instance.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -220,8 +250,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8C8916CD1BCFED4D00A77184 /* SwiftLearningTests.swift in Sources */,
+				8C15BDDC1BD074EF00C595BA /* ClassifierBaseTest.swift in Sources */,
+				8C15BDD61BD070E400C595BA /* InstanceTests.swift in Sources */,
 				8C2BD2211BCFF417004E7302 /* FeatureVectorTests.swift in Sources */,
+				8C15BDDA1BD074C100C595BA /* MajorityClassifierTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
