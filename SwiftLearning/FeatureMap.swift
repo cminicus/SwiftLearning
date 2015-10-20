@@ -13,6 +13,8 @@ public class FeatureMap {
     /// Internal "hash map" to hold key, value pairs
     private var map = [(Int, Double)]()
     
+    private var keys = [Int]()
+    
     /**
     Empty init
     
@@ -32,10 +34,12 @@ public class FeatureMap {
         for (currentIndex, (currentKey, _)) in map.enumerate() {
             if currentKey > key {
                 map.insert((key, value), atIndex: currentIndex)
+                keys.insert(key, atIndex: currentIndex)
                 return
             }
         }
         map.append((key, value))
+        keys.append(key)
     }
     
     /**
@@ -44,7 +48,7 @@ public class FeatureMap {
     - returns: Array of sorted keys
     */
     public func keyArray() -> [Int] {
-        return map.map { return $0.0 }
+        return keys
     }
     
     /**
@@ -71,10 +75,10 @@ public class FeatureMap {
     */
     public func put(key: Int, value: Double) {
         var i = 0
-        for (mapKey, value) in map {
+        for (mapKey, _) in map {
             if key == mapKey {
-                map.removeAtIndex(i)
-                map.insert((key, value), atIndex: i)
+                map[i] = (key, value)
+                keys[i] = key
                 return
             }
             i++

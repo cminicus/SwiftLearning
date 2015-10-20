@@ -16,9 +16,6 @@ public class EvenOddClassifier: Classifier {
         var evenSum = 0.0
         var oddSum = 0.0
         
-        let total = Double(instances.count)
-        var current = 0.0
-        
         for instance in instances {
             let vector = instance.featureVector
             let keys = vector.keyArray()
@@ -30,8 +27,6 @@ public class EvenOddClassifier: Classifier {
                     oddSum += value
                 }
             }
-            current++
-            print((current / total) * 100)
         }
         
         self.prediction = evenSum >= oddSum ? 1 : 0

@@ -21,38 +21,81 @@ class MajorityClassifierTests: ClassifierBaseTest {
         super.tearDown()
     }
 
-    func testThatMajorityClassifierIsAccurate() {
-//        self.measureBlock {
-//            let majorityClassifier = MajorityClassifier()
-//            majorityClassifier.train(self.trainInstances)
-//        }
-        
+    func testThatClassifiersAreAccurate() {
+        // ------------------------- Majority ----------------------------------
         let majorityClassifier = MajorityClassifier()
         majorityClassifier.train(self.trainInstances)
         
         let evaluator = AccuracyEvaluator()
-        let correct = evaluator.evaluate(self.testInstances, classifier: majorityClassifier)
+        let majorityTrainAccuracy = evaluator.evaluate(
+            self.trainInstances,
+            classifier: majorityClassifier
+        )
+        print("Majority Classifier - Train: \(majorityTrainAccuracy)")
+        // weird bug with this if using DBL_EPSILON
+        XCTAssertEqualWithAccuracy(majorityTrainAccuracy, 50.75, accuracy: 0.01)
         
-        XCTAssertTrue(correct > 50.0)
         
-//        self.measureBlock {
-//            let c = EvenOddClassifier()
-//            c.train(self.trainInstances)
-//        }
-        // lol takes .293 seconds if adding -O (not zero) flag in build settings (other swift flags)
+        let majorityTestAccuracy = evaluator.evaluate(
+            self.testInstances,
+            classifier: majorityClassifier
+        )
+        print("Majority Classifier - Test: \(majorityTestAccuracy)")
+        XCTAssertEqualWithAccuracy(majorityTestAccuracy, 51.0, accuracy: DBL_EPSILON)
         
-//        let c = EvenOddClassifier()
-//        c.train(self.trainInstances) // takes about 43 seconds...
-//        
-//        let y = evaluator.evaluate(self.testInstances, classifier: c)
-//        _ = 6
         
-//        self.measureBlock {
-            let c = LogisticRegressionClassifier()
-            c.train(self.trainInstances)
-//        }
-        let y = evaluator.evaluate(self.testInstances, classifier: c)
-        let x = 4
+        // ------------------------- Even-Odd ----------------------------------
+        let evenOddClassifier = EvenOddClassifier()
+        evenOddClassifier.train(self.trainInstances)
+        let evenOddTrainAccuracy = evaluator.evaluate(
+            self.trainInstances,
+            classifier: evenOddClassifier
+        )
+        print("Even-Odd Classifier - Train: \(evenOddTrainAccuracy)")
+        XCTAssertEqualWithAccuracy(evenOddTrainAccuracy, 49.25, accuracy: DBL_EPSILON)
+        
+        let evenOddTestAccuracy = evaluator.evaluate(
+            self.testInstances,
+            classifier: evenOddClassifier
+        )
+        print("Even-Odd Classifier - Test: \(evenOddTestAccuracy)")
+        XCTAssertEqualWithAccuracy(evenOddTestAccuracy, 49.0, accuracy: DBL_EPSILON)
+        
+        
+        // --------------------- Logistic Regression ---------------------------
+        let logisticRegressionClassifier = LogisticRegressionClassifier()
+        logisticRegressionClassifier.train(self.trainInstances)
+        let logisticTrainAccuracy = evaluator.evaluate(
+            self.trainInstances,
+            classifier: logisticRegressionClassifier
+        )
+        print("Logistic Regression Classifier - Train: \(logisticTrainAccuracy)")
+        XCTAssertEqualWithAccuracy(logisticTrainAccuracy, 96.5, accuracy: DBL_EPSILON)
+        
+        let logisticTestAccuracy = evaluator.evaluate(
+            self.testInstances,
+            classifier: logisticRegressionClassifier
+        )
+        print("Logistic Regression Classifier - Test: \(logisticTestAccuracy)")
+        XCTAssertEqualWithAccuracy(logisticTestAccuracy, 88.0, accuracy: DBL_EPSILON)
+        
+        
+        // -------------------------- Pegasos ----------------------------------
+        let pegasosRegressionClassifier = PegasosClassifier()
+        pegasosRegressionClassifier.train(self.trainInstances)
+        let pegasosTrainAccuracy = evaluator.evaluate(
+            self.trainInstances,
+            classifier: pegasosRegressionClassifier
+        )
+        print("Pegasos Classifier - Train: \(pegasosTrainAccuracy)")
+        XCTAssertEqualWithAccuracy(pegasosTrainAccuracy, 100.0, accuracy: DBL_EPSILON)
+        
+        let pegasosTestAccuracy = evaluator.evaluate(
+            self.testInstances,
+            classifier: pegasosRegressionClassifier
+        )
+        print("Pegasos Classifier - Test: \(pegasosTestAccuracy)")
+        XCTAssertEqualWithAccuracy(pegasosTestAccuracy, 88.0, accuracy: DBL_EPSILON)
     }
 
 }

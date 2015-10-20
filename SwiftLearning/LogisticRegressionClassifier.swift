@@ -24,6 +24,9 @@ public class LogisticRegressionClassifier: Classifier {
     }
     
     public func train(instances: [Instance]) {
+        let total = Double(iterations) * Double(instances.count)
+        var current = 0.0
+        
         for _ in 0..<iterations {
             for instance in instances {
                 let vector = instance.featureVector
@@ -39,14 +42,17 @@ public class LogisticRegressionClassifier: Classifier {
                     let gradient = Double(label) * gNegative * x_i_j + Double(1 - label) * gPositive * -x_i_j
                     
                     var previousSum = partialGradientSums.get(key) == nil ? 0 : partialGradientSums.get(key)!
-                    previousSum += pow(gradient, 2)
+                    
+                    previousSum += (gradient * gradient)
                     partialGradientSums.put(key, value: previousSum)
                     
-                    let n_i_j = self.eta / sqrt(1 + previousSum)
+                    let n_i_j = self.eta / sqrt(1.0 + previousSum)
                     
                     let w_j = w.get(key) == nil ? 0 : w.get(key)!
                     w.put(key, value: w_j + n_i_j * gradient)
                 }
+                print(current / total * 100)
+                current++
             }
         }
     }
@@ -60,16 +66,16 @@ public class LogisticRegressionClassifier: Classifier {
     }
     
     private func calculateLinkFunction(z: Double) -> Double {
-        return 1.0 / (1 + exp(z))
+        return 1.0 / (1 + exp(-z))
     }
     
-    private func multiplyVectors(map: FeatureMap, vector: FeatureVector) -> Double {
+    private func multiplyVectors(w: FeatureMap, vector: FeatureVector) -> Double {
         var sum = 0.0
         let keys = vector.keyArray()
         
         for key in keys {
             let value = vector.get(key)!
-            let w_j = map.get(key) == nil ? 0 : map.get(key)!
+            let w_j = w.get(key) == nil ? 0 : w.get(key)!
             
             sum += (value * w_j)
         }

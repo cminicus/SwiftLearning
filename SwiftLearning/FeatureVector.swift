@@ -14,6 +14,10 @@ public class FeatureVector {
     /// Internal "hash map" to hold key, value pairs
     private var map = [(Int, Double)]()
     
+    private var keys = [Int]()
+    
+    public var preSortedData = false
+    
     /**
     Empty init
     
@@ -28,15 +32,33 @@ public class FeatureVector {
     - parameter key:   The feature key
     - parameter value: The value for the particular feature
     */
-    public func add(key: Int, value: Double) {
+    private func addSorted(key: Int, value: Double) {
         // keep internal map sorted by key
         for (currentIndex, (currentKey, _)) in map.enumerate() {
             if currentKey > key {
                 map.insert((key, value), atIndex: currentIndex)
+                keys.insert(key, atIndex: currentIndex)
                 return
             }
         }
         map.append((key, value))
+        keys.append(key)
+    }
+    
+    /**
+    Adds a key and value tuple to the feature vector by either appending,
+    or keeping the data sorted, based on the "preSortedData" boolean
+    
+    - parameter key:   The feature key
+    - parameter value: The value for the particular feature
+    */
+    public func add(key: Int, value: Double) {
+        if preSortedData {
+            map.append((key, value))
+            keys.append(key)
+        } else {
+            addSorted(key, value: value)
+        }
     }
     
     /**
@@ -45,11 +67,11 @@ public class FeatureVector {
     - returns: Array of sorted keys
     */
     public func keyArray() -> [Int] {
-        return map.map { return $0.0 }
+        return self.keys
     }
     
     /**
-    Gets a value for the given key from internal map
+    Gets a value for the given key from the feature vector
     
     - parameter key: They key for which to get the value
     

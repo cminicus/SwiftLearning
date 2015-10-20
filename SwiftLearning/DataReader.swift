@@ -39,6 +39,7 @@ public class DataReader {
                 }
                 let label = Int(splitLine.first!)!
                 let featureVector = FeatureVector()
+                featureVector.preSortedData = true
                 
                 for i in 1..<splitLine.count {
                     let feature = splitLine[i]
@@ -80,6 +81,7 @@ public class DataReader {
                 }
                 let label = Int(splitLine.first!)!
                 let featureVector = FeatureVector()
+                featureVector.preSortedData = true
                 
                 for i in 1..<splitLine.count {
                     let feature = splitLine[i]

@@ -17,6 +17,7 @@
 		8C2BD21A1BCFEF94004E7302 /* MajorityClassifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C2BD2191BCFEF94004E7302 /* MajorityClassifier.swift */; settings = {ASSET_TAGS = (); }; };
 		8C2BD21D1BCFF0F1004E7302 /* FeatureVector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C2BD21C1BCFF0F1004E7302 /* FeatureVector.swift */; settings = {ASSET_TAGS = (); }; };
 		8C2BD2211BCFF417004E7302 /* FeatureVectorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C2BD2201BCFF417004E7302 /* FeatureVectorTests.swift */; settings = {ASSET_TAGS = (); }; };
+		8C5A2EE81BD537FB00E5A74A /* FeatureMapTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C5A2EE71BD537FB00E5A74A /* FeatureMapTests.swift */; settings = {ASSET_TAGS = (); }; };
 		8C8916C11BCFED4C00A77184 /* SwiftLearning.h in Headers */ = {isa = PBXBuildFile; fileRef = 8C8916C01BCFED4C00A77184 /* SwiftLearning.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8C8916C81BCFED4D00A77184 /* SwiftLearning.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C8916BD1BCFED4C00A77184 /* SwiftLearning.framework */; settings = {ASSET_TAGS = (); }; };
 		8C9841F51BD08B1E0051CBEB /* AccuracyEvaluator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C9841F41BD08B1E0051CBEB /* AccuracyEvaluator.swift */; settings = {ASSET_TAGS = (); }; };
@@ -24,6 +25,7 @@
 		8C9841F91BD08EF40051CBEB /* EvenOddClassifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C9841F81BD08EF40051CBEB /* EvenOddClassifier.swift */; settings = {ASSET_TAGS = (); }; };
 		8C9842021BD184980051CBEB /* LogisticRegressionClassifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C9842011BD184980051CBEB /* LogisticRegressionClassifier.swift */; settings = {ASSET_TAGS = (); }; };
 		8C9842041BD184D60051CBEB /* FeatureMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C9842031BD184D60051CBEB /* FeatureMap.swift */; settings = {ASSET_TAGS = (); }; };
+		8CB1B3821BD6CBDD00CD474D /* PegasosClassifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CB1B3811BD6CBDD00CD474D /* PegasosClassifier.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +49,7 @@
 		8C2BD2191BCFEF94004E7302 /* MajorityClassifier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MajorityClassifier.swift; sourceTree = "<group>"; };
 		8C2BD21C1BCFF0F1004E7302 /* FeatureVector.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeatureVector.swift; sourceTree = "<group>"; };
 		8C2BD2201BCFF417004E7302 /* FeatureVectorTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeatureVectorTests.swift; sourceTree = "<group>"; };
+		8C5A2EE71BD537FB00E5A74A /* FeatureMapTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeatureMapTests.swift; sourceTree = "<group>"; };
 		8C8916BD1BCFED4C00A77184 /* SwiftLearning.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftLearning.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8C8916C01BCFED4C00A77184 /* SwiftLearning.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SwiftLearning.h; sourceTree = "<group>"; };
 		8C8916C21BCFED4C00A77184 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -57,6 +60,7 @@
 		8C9841F81BD08EF40051CBEB /* EvenOddClassifier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EvenOddClassifier.swift; sourceTree = "<group>"; };
 		8C9842011BD184980051CBEB /* LogisticRegressionClassifier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogisticRegressionClassifier.swift; sourceTree = "<group>"; };
 		8C9842031BD184D60051CBEB /* FeatureMap.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeatureMap.swift; sourceTree = "<group>"; };
+		8CB1B3811BD6CBDD00CD474D /* PegasosClassifier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PegasosClassifier.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +98,7 @@
 				8C2BD2191BCFEF94004E7302 /* MajorityClassifier.swift */,
 				8C9841F81BD08EF40051CBEB /* EvenOddClassifier.swift */,
 				8C9842011BD184980051CBEB /* LogisticRegressionClassifier.swift */,
+				8CB1B3811BD6CBDD00CD474D /* PegasosClassifier.swift */,
 			);
 			name = Classifiers;
 			sourceTree = "<group>";
@@ -133,6 +138,7 @@
 			isa = PBXGroup;
 			children = (
 				8C2BD2201BCFF417004E7302 /* FeatureVectorTests.swift */,
+				8C5A2EE71BD537FB00E5A74A /* FeatureMapTests.swift */,
 				8C15BDD51BD070E400C595BA /* InstanceTests.swift */,
 				8C15BDDD1BD0752B00C595BA /* ClassifierTests */,
 				8C8916CE1BCFED4D00A77184 /* Info.plist */,
@@ -281,6 +287,7 @@
 				8C9841F91BD08EF40051CBEB /* EvenOddClassifier.swift in Sources */,
 				8C15BDD81BD0720600C595BA /* Classifier.swift in Sources */,
 				8C15BDDF1BD078CD00C595BA /* DataReader.swift in Sources */,
+				8CB1B3821BD6CBDD00CD474D /* PegasosClassifier.swift in Sources */,
 				8C9842041BD184D60051CBEB /* FeatureMap.swift in Sources */,
 				8C2BD21D1BCFF0F1004E7302 /* FeatureVector.swift in Sources */,
 				8C2BD21A1BCFEF94004E7302 /* MajorityClassifier.swift in Sources */,
@@ -294,6 +301,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8C5A2EE81BD537FB00E5A74A /* FeatureMapTests.swift in Sources */,
 				8C15BDDC1BD074EF00C595BA /* ClassifierBaseTest.swift in Sources */,
 				8C15BDD61BD070E400C595BA /* InstanceTests.swift in Sources */,
 				8C2BD2211BCFF417004E7302 /* FeatureVectorTests.swift in Sources */,
