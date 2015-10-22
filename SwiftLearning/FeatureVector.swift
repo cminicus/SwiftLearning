@@ -14,8 +14,10 @@ public class FeatureVector {
     /// Internal "hash map" to hold key, value pairs
     private var map = [(Int, Double)]()
     
+    /// Internal key array for the keyArray function
     private var keys = [Int]()
     
+    /// Option to turn off sorting, allowing in faster add speeds
     public var preSortedData = false
     
     /**

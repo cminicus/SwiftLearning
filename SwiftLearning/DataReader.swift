@@ -18,16 +18,21 @@ public class DataReader {
     
     public func readTrainData() -> [Instance] {
         
-        guard let frameworkBundle = NSBundle(identifier: "com.claytonminicus.SwiftLearning") else {
+        guard let frameworkBundle = NSBundle(
+            identifier: "com.claytonminicus.SwiftLearning") else {
             return []
         }
         
-        guard let path = frameworkBundle.pathForResource(fileName, ofType: "train") else {
+        guard let path = frameworkBundle.pathForResource(
+            fileName, ofType: "train") else {
             return []
         }
 
         do {
-            let content = try String(contentsOfFile:path, encoding: NSUTF8StringEncoding)
+            let content = try String(
+                contentsOfFile:path,
+                encoding: NSUTF8StringEncoding
+            )
             let contentArray = content.componentsSeparatedByString("\n")
             
             var instances = [Instance]()
@@ -48,7 +53,12 @@ public class DataReader {
                     let value = keyAndValue.last!
                     featureVector.add(Int(key)!, value: Double(value)!)
                 }
-                instances.append(Instance(featureVector: featureVector, label: label))
+                let instance = Instance(
+                    featureVector: featureVector,
+                    label: label
+                )
+                instances.append(instance)
+                
                 print(Float(instances.count) / Float(contentArray.count) * 100)
             }
             
@@ -60,16 +70,21 @@ public class DataReader {
     }
     
     public func readTestData() -> [Instance] {
-        guard let frameworkBundle = NSBundle(identifier: "com.claytonminicus.SwiftLearning") else {
+        guard let frameworkBundle = NSBundle(
+            identifier: "com.claytonminicus.SwiftLearning") else {
             return []
         }
         
-        guard let path = frameworkBundle.pathForResource(fileName, ofType: "test") else {
+        guard let path = frameworkBundle.pathForResource(
+            fileName, ofType: "test") else {
             return []
         }
         
         do {
-            let content = try String(contentsOfFile:path, encoding: NSUTF8StringEncoding)
+            let content = try String(
+                contentsOfFile:path,
+                encoding: NSUTF8StringEncoding
+            )
             let contentArray = content.componentsSeparatedByString("\n")
             
             var instances = [Instance]()

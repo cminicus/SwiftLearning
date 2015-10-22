@@ -21,7 +21,6 @@ public class PegasosClassifier: Classifier {
         self.t = 1
     }
     
-    
     public func train(instances: [Instance]) {
         initializeW(instances)
         
@@ -29,14 +28,18 @@ public class PegasosClassifier: Classifier {
         
         for _ in 0..<iterations {
             for instance in instances {
-                let vector = instance.featureVector
                 var label = instance.label
+                let vector = instance.featureVector
+               
                 
                 if label == 0 {
                     label = -1
                 }
                 
-                let product = Double(label) * innerProduct(self.w, vector: vector)
+                let product = Double(label) * innerProduct(
+                    self.w,
+                    vector: vector
+                )
                 for (key, value) in w.enumerate() {
                     var baseValue = (1.0 - 1.0 / Double(self.t)) * value
                     if product < 1 {

@@ -39,9 +39,11 @@ public class LogisticRegressionClassifier: Classifier {
                 let keys = vector.keyArray()
                 for key in keys {
                     let x_i_j = vector.get(key)!
-                    let gradient = Double(label) * gNegative * x_i_j + Double(1 - label) * gPositive * -x_i_j
+                    let gradient = Double(label) * gNegative * x_i_j +
+                        Double(1 - label) * gPositive * -x_i_j
                     
-                    var previousSum = partialGradientSums.get(key) == nil ? 0 : partialGradientSums.get(key)!
+                    var previousSum = partialGradientSums.get(key) == nil
+                        ? 0 : partialGradientSums.get(key)!
                     
                     previousSum += (gradient * gradient)
                     partialGradientSums.put(key, value: previousSum)

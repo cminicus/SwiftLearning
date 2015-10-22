@@ -10,10 +10,6 @@ import Foundation
 
 public class MajorityClassifier: Classifier {
     
-//    public init(iterations: Int = 20) {
-//        
-//    }
-    
     private var prediction: Int!
     
     public func train(instances: [Instance]) {

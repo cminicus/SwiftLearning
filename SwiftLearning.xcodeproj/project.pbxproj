@@ -10,7 +10,7 @@
 		8C15BDD41BD06F8100C595BA /* Instance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C15BDD31BD06F8100C595BA /* Instance.swift */; settings = {ASSET_TAGS = (); }; };
 		8C15BDD61BD070E400C595BA /* InstanceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C15BDD51BD070E400C595BA /* InstanceTests.swift */; settings = {ASSET_TAGS = (); }; };
 		8C15BDD81BD0720600C595BA /* Classifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C15BDD71BD0720600C595BA /* Classifier.swift */; settings = {ASSET_TAGS = (); }; };
-		8C15BDDA1BD074C100C595BA /* MajorityClassifierTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C15BDD91BD074C100C595BA /* MajorityClassifierTests.swift */; settings = {ASSET_TAGS = (); }; };
+		8C15BDDA1BD074C100C595BA /* ClassifierAccuracyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C15BDD91BD074C100C595BA /* ClassifierAccuracyTests.swift */; settings = {ASSET_TAGS = (); }; };
 		8C15BDDC1BD074EF00C595BA /* ClassifierBaseTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C15BDDB1BD074EF00C595BA /* ClassifierBaseTest.swift */; settings = {ASSET_TAGS = (); }; };
 		8C15BDDF1BD078CD00C595BA /* DataReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C15BDDE1BD078CD00C595BA /* DataReader.swift */; settings = {ASSET_TAGS = (); }; };
 		8C15BDE31BD07C0700C595BA /* speech.train in Resources */ = {isa = PBXBuildFile; fileRef = 8C15BDE21BD07C0700C595BA /* speech.train */; settings = {ASSET_TAGS = (); }; };
@@ -42,7 +42,7 @@
 		8C15BDD31BD06F8100C595BA /* Instance.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Instance.swift; sourceTree = "<group>"; };
 		8C15BDD51BD070E400C595BA /* InstanceTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InstanceTests.swift; sourceTree = "<group>"; };
 		8C15BDD71BD0720600C595BA /* Classifier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Classifier.swift; sourceTree = "<group>"; };
-		8C15BDD91BD074C100C595BA /* MajorityClassifierTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MajorityClassifierTests.swift; sourceTree = "<group>"; };
+		8C15BDD91BD074C100C595BA /* ClassifierAccuracyTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClassifierAccuracyTests.swift; sourceTree = "<group>"; };
 		8C15BDDB1BD074EF00C595BA /* ClassifierBaseTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClassifierBaseTest.swift; sourceTree = "<group>"; };
 		8C15BDDE1BD078CD00C595BA /* DataReader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataReader.swift; sourceTree = "<group>"; };
 		8C15BDE21BD07C0700C595BA /* speech.train */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = speech.train; sourceTree = "<group>"; };
@@ -86,7 +86,7 @@
 			isa = PBXGroup;
 			children = (
 				8C15BDDB1BD074EF00C595BA /* ClassifierBaseTest.swift */,
-				8C15BDD91BD074C100C595BA /* MajorityClassifierTests.swift */,
+				8C15BDD91BD074C100C595BA /* ClassifierAccuracyTests.swift */,
 			);
 			name = ClassifierTests;
 			sourceTree = "<group>";
@@ -305,7 +305,7 @@
 				8C15BDDC1BD074EF00C595BA /* ClassifierBaseTest.swift in Sources */,
 				8C15BDD61BD070E400C595BA /* InstanceTests.swift in Sources */,
 				8C2BD2211BCFF417004E7302 /* FeatureVectorTests.swift in Sources */,
-				8C15BDDA1BD074C100C595BA /* MajorityClassifierTests.swift in Sources */,
+				8C15BDDA1BD074C100C595BA /* ClassifierAccuracyTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
