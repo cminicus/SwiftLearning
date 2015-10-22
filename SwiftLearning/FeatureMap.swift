@@ -1,26 +1,51 @@
+// FeatureMap.swift
 //
-//  FeatureMap.swift
-//  SwiftLearning
+// Copyright (c) 2015 Clayton Minicus (http://claytonminicus.com)
 //
-//  Created by Clayton Minicus on 10/16/15.
-//  Copyright © 2015 Clayton Minicus. All rights reserved.
+// Permission is hereby granted, free of charge, to any person obtaining a copy
+// of this software and associated documentation files (the "Software"), to deal
+// in the Software without restriction, including without limitation the rights
+// to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+// copies of the Software, and to permit persons to whom the Software is
+// furnished to do so, subject to the following conditions:
 //
+// The above copyright notice and this permission notice shall be included in
+// all copies or substantial portions of the Software.
+//
+// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+// IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+// FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+// AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+// LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+// OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+// THE SOFTWARE.
 
 import Foundation
 
-public class FeatureMap {
+/**
+    The data structure which backs all FeatureVectors. A FeatureMap is a sparse
+    array, only containing key and value pairs as they are added
+*/
+internal class FeatureMap {
     
     /// Internal "hash map" to hold key, value pairs
-    private var map = [(Int, Double)]()
+    private var map: [(Int, Double)]
     
-    private var keys = [Int]()
+    /// Internal list of keys for quick access
+    private var keys: [Int]
+    
+    /// True if FeatureMap should sort on it's own, false if the data is pre sorted
+    var preSortedData = false
     
     /**
-    Empty init
+    Initializes the FeatureMap
     
-    - returns: A FeatureVector instance
+    - returns: A FeatureMap instance
     */
-    public init() {}
+    init() {
+        map  = [(Int, Double)]()
+        keys = [Int]()
+    }
     
     /**
     Adds a key and value tuple to the internal hash map while remaining
@@ -29,7 +54,7 @@ public class FeatureMap {
     - parameter key:   The feature key
     - parameter value: The value for the particular feature
     */
-    public func add(key: Int, value: Double) {
+    private func addSorted(key: Int, value: Double) {
         // keep internal map sorted by key
         for (currentIndex, (currentKey, _)) in map.enumerate() {
             if currentKey > key {
@@ -43,22 +68,38 @@ public class FeatureMap {
     }
     
     /**
+    Adds a key and value tuple to the internal hash map by either appending, if
+    preSortedData is true, or by keeping the hash map sorted itself
+    
+    - parameter key:   The feature key
+    - parameter value: The value of the particular feature
+    */
+    func add(key: Int, value: Double) {
+        if preSortedData {
+            map.append((key, value))
+            keys.append(key)
+        } else {
+            addSorted(key, value: value)
+        }
+    }
+    
+    /**
     Gets the array of all keys in feature vector
     
     - returns: Array of sorted keys
     */
-    public func keyArray() -> [Int] {
+    func keyArray() -> [Int] {
         return keys
     }
     
     /**
-    Gets a value for the given key from internal map
+    Gets a value for the given key from the FeatureMap
     
     - parameter key: They key for which to get the value
     
     - returns: The value if found, nil otherwise
     */
-    public func get(key: Int) -> Double? {
+    func get(key: Int) -> Double? {
         for (mapKey, value) in map {
             if key == mapKey {
                 return value
@@ -73,7 +114,7 @@ public class FeatureMap {
     - parameter key:   The key for which to update
     - parameter value: The value to replace the old value with
     */
-    public func put(key: Int, value: Double) {
+    func put(key: Int, value: Double) {
         var i = 0
         for (mapKey, _) in map {
             if key == mapKey {
@@ -87,13 +128,13 @@ public class FeatureMap {
     }
     
     /**
-    Checks where the feature vector contains the given key
+    Checks where the FeatureMap contains the given key
     
-    - parameter key: The key to check the feature  vector for
+    - parameter key: The key to check the FeatureMap for
     
     - returns: True if the key is found, false otherwise
     */
-    public func containsKey(key: Int) -> Bool {
+    func containsKey(key: Int) -> Bool {
         for (mapKey, _) in map {
             if key == mapKey {
                 return true
@@ -101,5 +142,4 @@ public class FeatureMap {
         }
         return false
     }
-    
 }

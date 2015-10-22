@@ -1,50 +1,51 @@
+// FeatureVector.swift
 //
-//  FeatureVector.swift
-//  SwiftLearning
+// Copyright (c) 2015 Clayton Minicus (http://claytonminicus.com)
 //
-//  Created by Clayton Minicus on 10/15/15.
-//  Copyright © 2015 Clayton Minicus. All rights reserved.
+// Permission is hereby granted, free of charge, to any person obtaining a copy
+// of this software and associated documentation files (the "Software"), to deal
+// in the Software without restriction, including without limitation the rights
+// to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+// copies of the Software, and to permit persons to whom the Software is
+// furnished to do so, subject to the following conditions:
 //
+// The above copyright notice and this permission notice shall be included in
+// all copies or substantial portions of the Software.
+//
+// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+// IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+// FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+// AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+// LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+// OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+// THE SOFTWARE.
+
 
 import Foundation
 
-
+/**
+    A sparse vector backed by a FeatureMap which contains all (key, value) pairs
+    of the features used by the SwiftLearning algorithms
+*/
 public class FeatureVector {
     
-    /// Internal "hash map" to hold key, value pairs
-    private var map = [(Int, Double)]()
+    /// Internal FeatureMap to hold key, value pairs
+    private var map: FeatureMap
     
-    /// Internal key array for the keyArray function
-    private var keys = [Int]()
-    
-    /// Option to turn off sorting, allowing in faster add speeds
-    public var preSortedData = false
+    /// Option to turn off internal sorting, allowing faster add speeds
+    public var preSortedData = false {
+        didSet(value) {
+            map.preSortedData = value
+        }
+    }
     
     /**
-    Empty init
+    Initializes the FeatureVector
     
     - returns: A FeatureVector instance
     */
-    public init() {}
-    
-    /**
-    Adds a key and value tuple to the internal hash map while remaining
-    sorted by the keys
-    
-    - parameter key:   The feature key
-    - parameter value: The value for the particular feature
-    */
-    private func addSorted(key: Int, value: Double) {
-        // keep internal map sorted by key
-        for (currentIndex, (currentKey, _)) in map.enumerate() {
-            if currentKey > key {
-                map.insert((key, value), atIndex: currentIndex)
-                keys.insert(key, atIndex: currentIndex)
-                return
-            }
-        }
-        map.append((key, value))
-        keys.append(key)
+    public init() {
+        map = FeatureMap()
     }
     
     /**
@@ -55,12 +56,7 @@ public class FeatureVector {
     - parameter value: The value for the particular feature
     */
     public func add(key: Int, value: Double) {
-        if preSortedData {
-            map.append((key, value))
-            keys.append(key)
-        } else {
-            addSorted(key, value: value)
-        }
+        map.add(key, value: value)
     }
     
     /**
@@ -69,7 +65,7 @@ public class FeatureVector {
     - returns: Array of sorted keys
     */
     public func keyArray() -> [Int] {
-        return self.keys
+        return map.keyArray()
     }
     
     /**
@@ -80,12 +76,17 @@ public class FeatureVector {
     - returns: The value if found, nil otherwise
     */
     public func get(key: Int) -> Double? {
-        for (mapKey, value) in map {
-            if key == mapKey {
-                return value
-            }
-        }
-        return nil
+        return map.get(key)
+    }
+    
+    /**
+    Updates the value for the given key or adds it if not present
+    
+    - parameter key:   The key for which to update
+    - parameter value: The value to replace the old value with
+    */
+    public func put(key: Int, value: Double) {
+         map.put(key, value: value)
     }
     
     /**
@@ -96,11 +97,6 @@ public class FeatureVector {
     - returns: True if the key is found, false otherwise
     */
     public func containsKey(key: Int) -> Bool {
-        for (mapKey, _) in map {
-            if key == mapKey {
-                return true
-            }
-        }
-        return false
+        return map.containsKey(key)
     }
 }
