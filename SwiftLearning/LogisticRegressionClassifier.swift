@@ -39,6 +39,9 @@ public class LogisticRegressionClassifier: Classifier {
     /// The number of iterations on which to train the classifier, defaults to 20
     private let iterations: Int
     
+    /// Whether or not to shuffle data the data after each iteration
+    public var shuffleData = false
+    
     /**
     Initializes the classifier with optional eta and iterations parameters
     
@@ -62,11 +65,16 @@ public class LogisticRegressionClassifier: Classifier {
     
     - parameter instances: The instances used to train the classifier
     */
-    public func train(instances: [Instance]) {
+    public func train(var instances: [Instance]) {
         let total = Double(iterations) * Double(instances.count)
         var current = 0.0
         
         for _ in 0..<iterations {
+            
+            if shuffleData {
+                instances = instances.shuffle()
+            }
+            
             for instance in instances {
                 let vector = instance.featureVector
                 let label = instance.label

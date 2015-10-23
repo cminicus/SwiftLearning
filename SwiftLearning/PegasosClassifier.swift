@@ -39,6 +39,9 @@ public class PegasosClassifier: Classifier {
     /// The global time step used in calculating the update step
     private var t: Int
     
+    /// Whether or not to shuffle data before each iteration
+    public var shuffleData = false
+    
     /**
     Initializes the classifier with optional lambda and iterations parameters
     
@@ -63,12 +66,17 @@ public class PegasosClassifier: Classifier {
     
     - parameter instances: The instances used to train the classifier
     */
-    public func train(instances: [Instance]) {
+    public func train(var instances: [Instance]) {
         initializeW(instances)
         
         let total = Double(iterations * instances.count)
         
         for _ in 0..<iterations {
+            
+            if shuffleData {
+                instances = instances.shuffle()
+            }
+            
             for instance in instances {
                 var label = instance.label
                 let vector = instance.featureVector

@@ -27,16 +27,6 @@ class FeatureVectorTests: XCTestCase {
     
     let iterations = 1000
     
-    override func setUp() {
-        super.setUp()
-        // Put setup code here. This method is called before the invocation of each test method in the class.
-    }
-    
-    override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-        super.tearDown()
-    }
-    
     func testThatEmptyFeatureVectorGivesEmptyKeyArray() {
         // given, when
         let featureVector = FeatureVector()
@@ -159,7 +149,6 @@ class FeatureVectorTests: XCTestCase {
     }
     
     func testFeatureVectorAddSpeed() {
-        
         // given
         let featureVector = FeatureVector()
         
@@ -172,7 +161,6 @@ class FeatureVectorTests: XCTestCase {
     }
     
     func testFeatureVectorGetSpeed() {
-        
         // given
         let featureVector = FeatureVector()
         
@@ -190,7 +178,6 @@ class FeatureVectorTests: XCTestCase {
     }
     
     func testFeatureVectorPutSpeed() {
-        
         // given
         let featureVector = FeatureVector()
         
@@ -208,7 +195,6 @@ class FeatureVectorTests: XCTestCase {
     }
     
     func testFeatureVectorKeyArraySpeed() {
-        
         // given
         let featureVector = FeatureVector()
         

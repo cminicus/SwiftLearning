@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8C0381A01BDA7C16000AE8E4 /* Shuffle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C03819F1BDA7C16000AE8E4 /* Shuffle.swift */; settings = {ASSET_TAGS = (); }; };
 		8C15BDD41BD06F8100C595BA /* Instance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C15BDD31BD06F8100C595BA /* Instance.swift */; settings = {ASSET_TAGS = (); }; };
 		8C15BDD61BD070E400C595BA /* InstanceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C15BDD51BD070E400C595BA /* InstanceTests.swift */; settings = {ASSET_TAGS = (); }; };
 		8C15BDD81BD0720600C595BA /* Classifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C15BDD71BD0720600C595BA /* Classifier.swift */; settings = {ASSET_TAGS = (); }; };
@@ -38,6 +39,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8C03819F1BDA7C16000AE8E4 /* Shuffle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Shuffle.swift; sourceTree = "<group>"; };
 		8C15BDD31BD06F8100C595BA /* Instance.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Instance.swift; sourceTree = "<group>"; };
 		8C15BDD51BD070E400C595BA /* InstanceTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InstanceTests.swift; sourceTree = "<group>"; };
 		8C15BDD71BD0720600C595BA /* Classifier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Classifier.swift; sourceTree = "<group>"; };
@@ -167,6 +169,7 @@
 			children = (
 				8C15BDDE1BD078CD00C595BA /* DataReader.swift */,
 				8C9841F41BD08B1E0051CBEB /* AccuracyEvaluator.swift */,
+				8C03819F1BDA7C16000AE8E4 /* Shuffle.swift */,
 			);
 			name = Utilities;
 			sourceTree = "<group>";
@@ -285,6 +288,7 @@
 				8C15BDD81BD0720600C595BA /* Classifier.swift in Sources */,
 				8C15BDDF1BD078CD00C595BA /* DataReader.swift in Sources */,
 				8CB1B3821BD6CBDD00CD474D /* PegasosClassifier.swift in Sources */,
+				8C0381A01BDA7C16000AE8E4 /* Shuffle.swift in Sources */,
 				8C9842041BD184D60051CBEB /* FeatureMap.swift in Sources */,
 				8C2BD21D1BCFF0F1004E7302 /* FeatureVector.swift in Sources */,
 				8C2BD21A1BCFEF94004E7302 /* MajorityClassifier.swift in Sources */,
