@@ -70,7 +70,7 @@ public class LogisticRegressionClassifier: Classifier {
         var current = 0.0
         
         for _ in 0..<iterations {
-            
+            // shuffle data if needed
             if shuffleData {
                 instances = instances.shuffle()
             }
@@ -79,6 +79,7 @@ public class LogisticRegressionClassifier: Classifier {
                 let vector = instance.featureVector
                 let label = instance.label
                 
+                // calculate inner product and link functions
                 let product = multiplyVectors(self.w, vector: vector)
                 let gPositive = calculateLinkFunction(product)
                 let gNegative = calculateLinkFunction(-product)
@@ -86,17 +87,21 @@ public class LogisticRegressionClassifier: Classifier {
                 let keys = vector.keyArray()
                 for key in keys {
                     let x_i_j = vector.get(key)!
+                    // calculate partial gradient
                     let gradient = Double(label) * gNegative * x_i_j +
                         Double(1 - label) * gPositive * -x_i_j
                     
+                    // add gradient squared to partial gradient sums
                     var previousSum = partialGradientSums.get(key) == nil
                         ? 0 : partialGradientSums.get(key)!
                     
                     previousSum += (gradient * gradient)
                     partialGradientSums.put(key, value: previousSum)
                     
+                    // calculate per-feature learning step
                     let n_i_j = self.eta / sqrt(1.0 + previousSum)
                     
+                    // tune parameters
                     let w_j = w.get(key) == nil ? 0 : w.get(key)!
                     w.put(key, value: w_j + n_i_j * gradient)
                 }

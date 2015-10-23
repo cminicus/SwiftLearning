@@ -67,12 +67,13 @@ public class PegasosClassifier: Classifier {
     - parameter instances: The instances used to train the classifier
     */
     public func train(var instances: [Instance]) {
+        // initialize parameter vector to proper size
         initializeW(instances)
         
         let total = Double(iterations * instances.count)
         
         for _ in 0..<iterations {
-            
+            // shuffle data if needed
             if shuffleData {
                 instances = instances.shuffle()
             }
@@ -81,23 +82,30 @@ public class PegasosClassifier: Classifier {
                 var label = instance.label
                 let vector = instance.featureVector
                
-                
+                // SVMs are {-1, 1} - need to convert 0 to -1
                 if label == 0 {
                     label = -1
                 }
                 
+                // calculate inner product
                 let product = Double(label) * innerProduct(
                     self.w,
                     vector: vector
                 )
+                // update every value in w every time
                 for (key, value) in w.enumerate() {
+                    // update that happens regardless
                     var baseValue = (1.0 - 1.0 / Double(self.t)) * value
+                    // update that only happens when inner product is wrong or
+                    // within the margin of 1
                     if product < 1 {
                         let x_i_t = vector.containsKey(key) ? vector.get(key)! : 0
                         baseValue += (1.0 / (lambda * Double(self.t))) * Double(label) * x_i_t
                     }
+                    // set new parameter
                     w[key] = baseValue
                 }
+                // increment global time step
                 self.t++
                 print(Double(self.t - 1) / total * 100)
             }
