@@ -18,6 +18,8 @@
 		8C2BD21A1BCFEF94004E7302 /* MajorityClassifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C2BD2191BCFEF94004E7302 /* MajorityClassifier.swift */; settings = {ASSET_TAGS = (); }; };
 		8C2BD21D1BCFF0F1004E7302 /* FeatureVector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C2BD21C1BCFF0F1004E7302 /* FeatureVector.swift */; settings = {ASSET_TAGS = (); }; };
 		8C2BD2211BCFF417004E7302 /* FeatureVectorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C2BD2201BCFF417004E7302 /* FeatureVectorTests.swift */; settings = {ASSET_TAGS = (); }; };
+		8C4072A41BDD813E00A23489 /* HashMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C4072A31BDD813E00A23489 /* HashMap.swift */; settings = {ASSET_TAGS = (); }; };
+		8C4072A61BDD839500A23489 /* HashMapTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C4072A51BDD839500A23489 /* HashMapTests.swift */; settings = {ASSET_TAGS = (); }; };
 		8C8916C11BCFED4C00A77184 /* SwiftLearning.h in Headers */ = {isa = PBXBuildFile; fileRef = 8C8916C01BCFED4C00A77184 /* SwiftLearning.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8C8916C81BCFED4D00A77184 /* SwiftLearning.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C8916BD1BCFED4C00A77184 /* SwiftLearning.framework */; settings = {ASSET_TAGS = (); }; };
 		8C9841F51BD08B1E0051CBEB /* AccuracyEvaluator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C9841F41BD08B1E0051CBEB /* AccuracyEvaluator.swift */; settings = {ASSET_TAGS = (); }; };
@@ -50,6 +52,8 @@
 		8C2BD2191BCFEF94004E7302 /* MajorityClassifier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MajorityClassifier.swift; sourceTree = "<group>"; };
 		8C2BD21C1BCFF0F1004E7302 /* FeatureVector.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeatureVector.swift; sourceTree = "<group>"; };
 		8C2BD2201BCFF417004E7302 /* FeatureVectorTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeatureVectorTests.swift; sourceTree = "<group>"; };
+		8C4072A31BDD813E00A23489 /* HashMap.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HashMap.swift; sourceTree = "<group>"; };
+		8C4072A51BDD839500A23489 /* HashMapTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HashMapTests.swift; sourceTree = "<group>"; };
 		8C8916BD1BCFED4C00A77184 /* SwiftLearning.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftLearning.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8C8916C01BCFED4C00A77184 /* SwiftLearning.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SwiftLearning.h; sourceTree = "<group>"; };
 		8C8916C21BCFED4C00A77184 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -138,6 +142,7 @@
 			isa = PBXGroup;
 			children = (
 				8C2BD2201BCFF417004E7302 /* FeatureVectorTests.swift */,
+				8C4072A51BDD839500A23489 /* HashMapTests.swift */,
 				8C15BDD51BD070E400C595BA /* InstanceTests.swift */,
 				8C15BDDD1BD0752B00C595BA /* ClassifierTests */,
 				8C8916CE1BCFED4D00A77184 /* Info.plist */,
@@ -158,6 +163,7 @@
 			isa = PBXGroup;
 			children = (
 				8C2BD21C1BCFF0F1004E7302 /* FeatureVector.swift */,
+				8C4072A31BDD813E00A23489 /* HashMap.swift */,
 				8C9842031BD184D60051CBEB /* FeatureMap.swift */,
 				8C15BDD31BD06F8100C595BA /* Instance.swift */,
 			);
@@ -286,6 +292,7 @@
 			files = (
 				8C9841F91BD08EF40051CBEB /* EvenOddClassifier.swift in Sources */,
 				8C15BDD81BD0720600C595BA /* Classifier.swift in Sources */,
+				8C4072A41BDD813E00A23489 /* HashMap.swift in Sources */,
 				8C15BDDF1BD078CD00C595BA /* DataReader.swift in Sources */,
 				8CB1B3821BD6CBDD00CD474D /* PegasosClassifier.swift in Sources */,
 				8C0381A01BDA7C16000AE8E4 /* Shuffle.swift in Sources */,
@@ -305,6 +312,7 @@
 				8C15BDDC1BD074EF00C595BA /* ClassifierBaseTest.swift in Sources */,
 				8C15BDD61BD070E400C595BA /* InstanceTests.swift in Sources */,
 				8C2BD2211BCFF417004E7302 /* FeatureVectorTests.swift in Sources */,
+				8C4072A61BDD839500A23489 /* HashMapTests.swift in Sources */,
 				8C15BDDA1BD074C100C595BA /* ClassifierAccuracyTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -33,7 +33,7 @@ class ClassifierAccuracyTests: ClassifierBaseTest {
         super.tearDown()
     }
 
-    func testThatClassifiersAreAccurate() {
+    func DISABLED_testThatClassifiersAreAccurate() {
         // ------------------------- Majority ----------------------------------
         let majorityClassifier = MajorityClassifier()
         
