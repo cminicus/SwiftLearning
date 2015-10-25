@@ -13,10 +13,6 @@ private struct Entry<K: protocol<Comparable, Hashable>, V: Hashable> {
     var key: K
     var value: V
     var hash: Int
-    
-    func hashCode() -> Int {
-        return key.hashValue ^ value.hashValue
-    }
 }
 
 public class HashMap<K: protocol<Comparable, Hashable>, V: Hashable> {
@@ -79,7 +75,7 @@ public class HashMap<K: protocol<Comparable, Hashable>, V: Hashable> {
     
     private func putValue(hash: Int, key: K, value: V) {
         let index = (buckets.count - 1) & hash
-        // hash % last?
+
         if buckets[index].isEmpty {
             buckets[index] = [Entry(key: key, value: value, hash: hash)]
         } else {

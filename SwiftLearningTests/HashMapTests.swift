@@ -10,73 +10,63 @@ import XCTest
 @testable import SwiftLearning
 
 class HashMapTests: XCTestCase {
+    
+    /** 
+        Findings
+    
+        For putting unique numbers, hashMaps are significantly faster than featureMaps.
+        However when putting numbers that repeat, unfortunately featureMaps are significantly
+        faster than hashMaps so for our purposes in this library, hashMaps are not useful
+        ** Cries **
 
-    override func setUp() {
-        super.setUp()
-        // Put setup code here. This method is called before the invocation of each test method in the class.
-    }
+    */
     
-    override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-        super.tearDown()
-    }
-    
-    func testThatHashMapProperlyAddsEntries() {
+    func testHashMapGetSpeed() {
         let hashMap = HashMap<Int, Double>()
         
         for i in 0..<10000 {
-            hashMap.put(i, value: Double(i))
+            hashMap.put(i % 700, value: Double(i))
         }
         
         self.measureBlock {
             for i in 0..<10000 {
-                hashMap.get(i)
+                hashMap.get(i % 700)
             }
         }
     }
     
-    func testThatFeatureMapProperlyAddsEntries() {
+    func testFeatureMapGetSpeed() {
         let hashMap = FeatureMap()
         
         for i in 0..<10000 {
-            hashMap.put(i, value: Double(i))
+            hashMap.put(i % 700, value: Double(i))
         }
         
         self.measureBlock {
             for i in 0..<10000 {
-                hashMap.get(i)
+                hashMap.get(i % 700)
             }
         }
     }
     
-    func testThatHashMapProperlyPutsEntries() {
+    func testHashMapPutSpeed() {
         let hashMap = HashMap<Int, Double>()
         
         self.measureBlock {
             for i in 0..<10000 {
-                hashMap.put(i, value: Double(i))
+                hashMap.put(i % 700, value: Double(i))
             }
         }
-        
-        for i in 0..<10000 {
-            XCTAssertEqual(hashMap.get(i), Double(i))
-        }
-        
     }
     
-    func testThatFeatureMapProperlyPutEntries() {
+    func testFeatureMapPutSpeed() {
         let hashMap = FeatureMap()
         
         self.measureBlock {
             for i in 0..<10000 {
-                hashMap.put(i, value: Double(i))
+                hashMap.put(i % 700, value: Double(i))
             }
         }
-        
-        for i in 0..<10000 {
-            XCTAssertEqual(hashMap.get(i), Double(i))
-        }
-        
     }
 
 }
