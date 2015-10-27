@@ -62,6 +62,9 @@ public class DataReader {
                 
                 for i in 1..<splitLine.count {
                     let feature = splitLine[i]
+                    if feature == "" {
+                        continue
+                    }
                     let keyAndValue = feature.componentsSeparatedByString(":")
                     let key = keyAndValue.first!
                     let value = keyAndValue.last!
@@ -114,6 +117,9 @@ public class DataReader {
                 
                 for i in 1..<splitLine.count {
                     let feature = splitLine[i]
+                    if feature == "" {
+                        continue
+                    }
                     let keyAndValue = feature.componentsSeparatedByString(":")
                     let key = keyAndValue.first!
                     let value = keyAndValue.last!

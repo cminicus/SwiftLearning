@@ -18,6 +18,19 @@
 		8C2BD21A1BCFEF94004E7302 /* MajorityClassifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C2BD2191BCFEF94004E7302 /* MajorityClassifier.swift */; settings = {ASSET_TAGS = (); }; };
 		8C2BD21D1BCFF0F1004E7302 /* FeatureVector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C2BD21C1BCFF0F1004E7302 /* FeatureVector.swift */; settings = {ASSET_TAGS = (); }; };
 		8C2BD2211BCFF417004E7302 /* FeatureVectorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C2BD2201BCFF417004E7302 /* FeatureVectorTests.swift */; settings = {ASSET_TAGS = (); }; };
+		8C3B37C11BDEB4A9005BEE8B /* mnist.test in Resources */ = {isa = PBXBuildFile; fileRef = 8C3B37BF1BDEB4A9005BEE8B /* mnist.test */; settings = {ASSET_TAGS = (); }; };
+		8C3B37C21BDEB4A9005BEE8B /* mnist.train in Resources */ = {isa = PBXBuildFile; fileRef = 8C3B37C01BDEB4A9005BEE8B /* mnist.train */; settings = {ASSET_TAGS = (); }; };
+		8C3B37C41BDEB561005BEE8B /* SwiftRandom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C3B37C31BDEB561005BEE8B /* SwiftRandom.swift */; settings = {ASSET_TAGS = (); }; };
+		8C3B37C61BDEB582005BEE8B /* NeuralNetworkClassifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C3B37C51BDEB582005BEE8B /* NeuralNetworkClassifier.swift */; settings = {ASSET_TAGS = (); }; };
+		8C3B37C81BDEB70D005BEE8B /* NeuralNetworkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C3B37C71BDEB70D005BEE8B /* NeuralNetworkTests.swift */; settings = {ASSET_TAGS = (); }; };
+		8C3B37D41BDFDD5A005BEE8B /* Arithmetic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C3B37CB1BDFDD5A005BEE8B /* Arithmetic.swift */; settings = {ASSET_TAGS = (); }; };
+		8C3B37D51BDFDD5A005BEE8B /* Auxiliary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C3B37CC1BDFDD5A005BEE8B /* Auxiliary.swift */; settings = {ASSET_TAGS = (); }; };
+		8C3B37D61BDFDD5A005BEE8B /* Exponential.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C3B37CD1BDFDD5A005BEE8B /* Exponential.swift */; settings = {ASSET_TAGS = (); }; };
+		8C3B37D71BDFDD5A005BEE8B /* FFT.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C3B37CE1BDFDD5A005BEE8B /* FFT.swift */; settings = {ASSET_TAGS = (); }; };
+		8C3B37D81BDFDD5A005BEE8B /* Hyperbolic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C3B37CF1BDFDD5A005BEE8B /* Hyperbolic.swift */; settings = {ASSET_TAGS = (); }; };
+		8C3B37D91BDFDD5A005BEE8B /* Matrix.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C3B37D01BDFDD5A005BEE8B /* Matrix.swift */; settings = {ASSET_TAGS = (); }; };
+		8C3B37DA1BDFDD5A005BEE8B /* Power.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C3B37D11BDFDD5A005BEE8B /* Power.swift */; settings = {ASSET_TAGS = (); }; };
+		8C3B37DC1BDFDD5A005BEE8B /* Trigonometric.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C3B37D31BDFDD5A005BEE8B /* Trigonometric.swift */; settings = {ASSET_TAGS = (); }; };
 		8C4072A41BDD813E00A23489 /* HashMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C4072A31BDD813E00A23489 /* HashMap.swift */; settings = {ASSET_TAGS = (); }; };
 		8C4072A61BDD839500A23489 /* HashMapTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C4072A51BDD839500A23489 /* HashMapTests.swift */; settings = {ASSET_TAGS = (); }; };
 		8C8916C11BCFED4C00A77184 /* SwiftLearning.h in Headers */ = {isa = PBXBuildFile; fileRef = 8C8916C01BCFED4C00A77184 /* SwiftLearning.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -52,6 +65,19 @@
 		8C2BD2191BCFEF94004E7302 /* MajorityClassifier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MajorityClassifier.swift; sourceTree = "<group>"; };
 		8C2BD21C1BCFF0F1004E7302 /* FeatureVector.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeatureVector.swift; sourceTree = "<group>"; };
 		8C2BD2201BCFF417004E7302 /* FeatureVectorTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeatureVectorTests.swift; sourceTree = "<group>"; };
+		8C3B37BF1BDEB4A9005BEE8B /* mnist.test */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = mnist.test; sourceTree = "<group>"; };
+		8C3B37C01BDEB4A9005BEE8B /* mnist.train */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = mnist.train; sourceTree = "<group>"; };
+		8C3B37C31BDEB561005BEE8B /* SwiftRandom.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftRandom.swift; sourceTree = "<group>"; };
+		8C3B37C51BDEB582005BEE8B /* NeuralNetworkClassifier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NeuralNetworkClassifier.swift; sourceTree = "<group>"; };
+		8C3B37C71BDEB70D005BEE8B /* NeuralNetworkTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NeuralNetworkTests.swift; sourceTree = "<group>"; };
+		8C3B37CB1BDFDD5A005BEE8B /* Arithmetic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Arithmetic.swift; sourceTree = "<group>"; };
+		8C3B37CC1BDFDD5A005BEE8B /* Auxiliary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Auxiliary.swift; sourceTree = "<group>"; };
+		8C3B37CD1BDFDD5A005BEE8B /* Exponential.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Exponential.swift; sourceTree = "<group>"; };
+		8C3B37CE1BDFDD5A005BEE8B /* FFT.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FFT.swift; sourceTree = "<group>"; };
+		8C3B37CF1BDFDD5A005BEE8B /* Hyperbolic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Hyperbolic.swift; sourceTree = "<group>"; };
+		8C3B37D01BDFDD5A005BEE8B /* Matrix.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Matrix.swift; sourceTree = "<group>"; };
+		8C3B37D11BDFDD5A005BEE8B /* Power.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Power.swift; sourceTree = "<group>"; };
+		8C3B37D31BDFDD5A005BEE8B /* Trigonometric.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Trigonometric.swift; sourceTree = "<group>"; };
 		8C4072A31BDD813E00A23489 /* HashMap.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HashMap.swift; sourceTree = "<group>"; };
 		8C4072A51BDD839500A23489 /* HashMapTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HashMapTests.swift; sourceTree = "<group>"; };
 		8C8916BD1BCFED4C00A77184 /* SwiftLearning.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftLearning.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -90,6 +116,7 @@
 			isa = PBXGroup;
 			children = (
 				8C15BDDB1BD074EF00C595BA /* ClassifierBaseTest.swift */,
+				8C3B37C71BDEB70D005BEE8B /* NeuralNetworkTests.swift */,
 				8C15BDD91BD074C100C595BA /* ClassifierAccuracyTests.swift */,
 			);
 			name = ClassifierTests;
@@ -103,8 +130,42 @@
 				8C9841F81BD08EF40051CBEB /* EvenOddClassifier.swift */,
 				8C9842011BD184980051CBEB /* LogisticRegressionClassifier.swift */,
 				8CB1B3811BD6CBDD00CD474D /* PegasosClassifier.swift */,
+				8C3B37C51BDEB582005BEE8B /* NeuralNetworkClassifier.swift */,
 			);
 			name = Classifiers;
+			sourceTree = "<group>";
+		};
+		8C3B37BC1BDEB190005BEE8B /* MNIST */ = {
+			isa = PBXGroup;
+			children = (
+				8C3B37BF1BDEB4A9005BEE8B /* mnist.test */,
+				8C3B37C01BDEB4A9005BEE8B /* mnist.train */,
+			);
+			name = MNIST;
+			path = ..;
+			sourceTree = "<group>";
+		};
+		8C3B37C91BDFDD37005BEE8B /* SwiftRandom */ = {
+			isa = PBXGroup;
+			children = (
+				8C3B37C31BDEB561005BEE8B /* SwiftRandom.swift */,
+			);
+			name = SwiftRandom;
+			sourceTree = "<group>";
+		};
+		8C3B37CA1BDFDD51005BEE8B /* Surge */ = {
+			isa = PBXGroup;
+			children = (
+				8C3B37CB1BDFDD5A005BEE8B /* Arithmetic.swift */,
+				8C3B37CC1BDFDD5A005BEE8B /* Auxiliary.swift */,
+				8C3B37CD1BDFDD5A005BEE8B /* Exponential.swift */,
+				8C3B37CE1BDFDD5A005BEE8B /* FFT.swift */,
+				8C3B37CF1BDFDD5A005BEE8B /* Hyperbolic.swift */,
+				8C3B37D01BDFDD5A005BEE8B /* Matrix.swift */,
+				8C3B37D11BDFDD5A005BEE8B /* Power.swift */,
+				8C3B37D31BDFDD5A005BEE8B /* Trigonometric.swift */,
+			);
+			name = Surge;
 			sourceTree = "<group>";
 		};
 		8C8916B31BCFED4C00A77184 = {
@@ -133,6 +194,7 @@
 				8C9842001BD1521D0051CBEB /* Utilities */,
 				8C2BD21B1BCFF00F004E7302 /* Classifiers */,
 				8C8916C21BCFED4C00A77184 /* Info.plist */,
+				8C3B37BC1BDEB190005BEE8B /* MNIST */,
 				8C9841FE1BD151F40051CBEB /* Speech */,
 			);
 			path = SwiftLearning;
@@ -174,7 +236,9 @@
 			isa = PBXGroup;
 			children = (
 				8C15BDDE1BD078CD00C595BA /* DataReader.swift */,
+				8C3B37C91BDFDD37005BEE8B /* SwiftRandom */,
 				8C9841F41BD08B1E0051CBEB /* AccuracyEvaluator.swift */,
+				8C3B37CA1BDFDD51005BEE8B /* Surge */,
 				8C03819F1BDA7C16000AE8E4 /* Shuffle.swift */,
 			);
 			name = Utilities;
@@ -273,6 +337,8 @@
 			files = (
 				8C15BDE31BD07C0700C595BA /* speech.train in Resources */,
 				8C9841F71BD08C8B0051CBEB /* speech.test in Resources */,
+				8C3B37C21BDEB4A9005BEE8B /* mnist.train in Resources */,
+				8C3B37C11BDEB4A9005BEE8B /* mnist.test in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -290,18 +356,28 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8C3B37D41BDFDD5A005BEE8B /* Arithmetic.swift in Sources */,
 				8C9841F91BD08EF40051CBEB /* EvenOddClassifier.swift in Sources */,
+				8C3B37D51BDFDD5A005BEE8B /* Auxiliary.swift in Sources */,
 				8C15BDD81BD0720600C595BA /* Classifier.swift in Sources */,
 				8C4072A41BDD813E00A23489 /* HashMap.swift in Sources */,
+				8C3B37C41BDEB561005BEE8B /* SwiftRandom.swift in Sources */,
 				8C15BDDF1BD078CD00C595BA /* DataReader.swift in Sources */,
+				8C3B37D81BDFDD5A005BEE8B /* Hyperbolic.swift in Sources */,
+				8C3B37DC1BDFDD5A005BEE8B /* Trigonometric.swift in Sources */,
 				8CB1B3821BD6CBDD00CD474D /* PegasosClassifier.swift in Sources */,
+				8C3B37D71BDFDD5A005BEE8B /* FFT.swift in Sources */,
 				8C0381A01BDA7C16000AE8E4 /* Shuffle.swift in Sources */,
+				8C3B37D61BDFDD5A005BEE8B /* Exponential.swift in Sources */,
 				8C9842041BD184D60051CBEB /* FeatureMap.swift in Sources */,
 				8C2BD21D1BCFF0F1004E7302 /* FeatureVector.swift in Sources */,
 				8C2BD21A1BCFEF94004E7302 /* MajorityClassifier.swift in Sources */,
 				8C9842021BD184980051CBEB /* LogisticRegressionClassifier.swift in Sources */,
+				8C3B37D91BDFDD5A005BEE8B /* Matrix.swift in Sources */,
 				8C9841F51BD08B1E0051CBEB /* AccuracyEvaluator.swift in Sources */,
 				8C15BDD41BD06F8100C595BA /* Instance.swift in Sources */,
+				8C3B37DA1BDFDD5A005BEE8B /* Power.swift in Sources */,
+				8C3B37C61BDEB582005BEE8B /* NeuralNetworkClassifier.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -312,6 +388,7 @@
 				8C15BDDC1BD074EF00C595BA /* ClassifierBaseTest.swift in Sources */,
 				8C15BDD61BD070E400C595BA /* InstanceTests.swift in Sources */,
 				8C2BD2211BCFF417004E7302 /* FeatureVectorTests.swift in Sources */,
+				8C3B37C81BDEB70D005BEE8B /* NeuralNetworkTests.swift in Sources */,
 				8C4072A61BDD839500A23489 /* HashMapTests.swift in Sources */,
 				8C15BDDA1BD074C100C595BA /* ClassifierAccuracyTests.swift in Sources */,
 			);
