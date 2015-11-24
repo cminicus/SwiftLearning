@@ -148,7 +148,7 @@ class FeatureVectorTests: XCTestCase {
         XCTAssertEqual(featureVector.get(1), 89)
     }
     
-    func testFeatureVectorAddSpeed() {
+    func DISABLED_testFeatureVectorAddSpeed() {
         // given
         let featureVector = FeatureVector()
         
@@ -160,7 +160,7 @@ class FeatureVectorTests: XCTestCase {
         }
     }
     
-    func testFeatureVectorGetSpeed() {
+    func DISABLED_testFeatureVectorGetSpeed() {
         // given
         let featureVector = FeatureVector()
         
@@ -177,7 +177,7 @@ class FeatureVectorTests: XCTestCase {
         }
     }
     
-    func testFeatureVectorPutSpeed() {
+    func DISABLED_testFeatureVectorPutSpeed() {
         // given
         let featureVector = FeatureVector()
         
@@ -194,7 +194,7 @@ class FeatureVectorTests: XCTestCase {
         }
     }
     
-    func testFeatureVectorKeyArraySpeed() {
+    func DISABLED_testFeatureVectorKeyArraySpeed() {
         // given
         let featureVector = FeatureVector()
         

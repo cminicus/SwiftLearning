@@ -69,6 +69,15 @@ public class FeatureVector {
     }
     
     /**
+    Gets the array of all values in feature vector
+    
+    - returns: Array of values sorted by corresponding key
+    */
+    public func valueArray() -> [Double] {
+        return map.valueArray()
+    }
+    
+    /**
     Gets a value for the given key from the feature vector
     
     - parameter key: They key for which to get the value

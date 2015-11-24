@@ -11,18 +11,14 @@ import XCTest
 
 class NeuralNetworkTests: XCTestCase {
     
-    override func setUp() {
-        super.setUp()
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+    func testThatNeuralNetworkOperatesCorrection() {
+        let dataReader = DataReader(fileName: "mnist-full")
+        let trainInstances = dataReader.readTrainData()
+        let testInstances = dataReader.readTestData()
+        
+//        let train = MNISTDataReader.readTrainData()
+        
+        let network = NeuralNetworkClassifier(layers: [784, 30, 10])
+        network.trainAndEvaluate(trainInstances, evaluation: testInstances)
     }
-    
-    override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-        super.tearDown()
-    }
-    
-    func testInitWorks() {
-        let n = NeuralNetworkClassifier(layers: [784, 30, 10])
-    }
-    
 }

@@ -23,7 +23,7 @@
 import Accelerate
 
 public struct Matrix<T where T: FloatingPointType, T: FloatLiteralConvertible> {
-    typealias Element = T
+    public typealias Element = T
 
     let rows: Int
     let columns: Int
@@ -43,7 +43,7 @@ public struct Matrix<T where T: FloatingPointType, T: FloatLiteralConvertible> {
 
         self.init(rows: m, columns: n, repeatedValue: repeatedValue)
 
-        for (i, row) in enumerate(contents) {
+        for (i, row) in contents.enumerate() {
             grid.replaceRange(i*n..<i*n+min(m, row.count), with: row)
         }
     }
@@ -59,20 +59,30 @@ public struct Matrix<T where T: FloatingPointType, T: FloatLiteralConvertible> {
             grid[(row * columns) + column] = newValue
         }
     }
+    
+    public func get(row: Int, _ column: Int) -> Element {
+        assert(indexIsValidForRow(row, column: column))
+        return grid[(row * columns) + column]
+    }
+    
+    public mutating func set(row: Int, column: Int, newValue: Element) {
+        assert(indexIsValidForRow(row, column: column))
+        grid[(row * columns) + column] = newValue
+    }
 
     private func indexIsValidForRow(row: Int, column: Int) -> Bool {
         return row >= 0 && row < rows && column >= 0 && column < columns
     }
 }
 
-// MARK: - Printable
+// MARK: - CustomStringConvertible
 
-extension Matrix: Printable {
+extension Matrix: CustomStringConvertible {
     public var description: String {
         var description = ""
 
         for i in 0..<rows {
-            let contents = join("\t", map(0..<columns){"\(self[i, $0])"})
+            let contents = (0..<columns).map{"\(self[i, $0])"}.joinWithSeparator("\t")
 
             switch (i, rows) {
             case (0, 1):
@@ -95,11 +105,11 @@ extension Matrix: Printable {
 // MARK: - SequenceType
 
 extension Matrix: SequenceType {
-    public func generate() -> GeneratorOf<ArraySlice<Element>> {
+    public func generate() -> AnyGenerator<ArraySlice<Element>> {
         let endIndex = rows * columns
         var nextRowStartIndex = 0
 
-        return GeneratorOf<ArraySlice<Element>> {
+        return anyGenerator {
             if nextRowStartIndex == endIndex {
                 return nil
             }
@@ -114,37 +124,37 @@ extension Matrix: SequenceType {
 
 // MARK: -
 
-public func add(x: Matrix<Float>, y: Matrix<Float>) -> Matrix<Float> {
-    precondition(x.rows == y.rows && x.columns == y.columns, "Matrix dimensions not compatible with addition")
+//public func add(x: Matrix<Float>, y: Matrix<Float>) -> Matrix<Float> {
+//    precondition(x.rows == y.rows && x.columns == y.columns, "Matrix dimensions not compatible with addition")
+//
+//    var results = y
+//    cblas_saxpy(Int32(x.grid.count), 1.0, x.grid, 1, &(results.grid), 1)
+//
+//    return results
+//}
+//
+//public func add(x: Matrix<Double>, y: Matrix<Double>) -> Matrix<Double> {
+//    precondition(x.rows == y.rows && x.columns == y.columns, "Matrix dimensions not compatible with addition")
+//
+//    var results = y
+//    cblas_daxpy(Int32(x.grid.count), 1.0, x.grid, 1, &(results.grid), 1)
+//
+//    return results
+//}
 
-    var results = y
-    cblas_saxpy(Int32(x.grid.count), 1.0, x.grid, 1, &(results.grid), 1)
-
-    return results
-}
-
-public func add(x: Matrix<Double>, y: Matrix<Double>) -> Matrix<Double> {
-    precondition(x.rows == y.rows && x.columns == y.columns, "Matrix dimensions not compatible with addition")
-
-    var results = y
-    cblas_daxpy(Int32(x.grid.count), 1.0, x.grid, 1, &(results.grid), 1)
-
-    return results
-}
-
-public func mul(alpha: Float, x: Matrix<Float>) -> Matrix<Float> {
-    var results = x
-    cblas_sscal(Int32(x.grid.count), alpha, &(results.grid), 1)
-
-    return results
-}
-
-public func mul(alpha: Double, x: Matrix<Double>) -> Matrix<Double> {
-    var results = x
-    cblas_dscal(Int32(x.grid.count), alpha, &(results.grid), 1)
-
-    return results
-}
+//public func mul(alpha: Float, x: Matrix<Float>) -> Matrix<Float> {
+//    var results = x
+//    cblas_sscal(Int32(x.grid.count), alpha, &(results.grid), 1)
+//
+//    return results
+//}
+//
+//public func mul(alpha: Double, x: Matrix<Double>) -> Matrix<Double> {
+//    var results = x
+//    cblas_dscal(Int32(x.grid.count), alpha, &(results.grid), 1)
+//
+//    return results
+//}
 
 public func mul(x: Matrix<Float>, y: Matrix<Float>) -> Matrix<Float> {
     precondition(x.columns == y.rows, "Matrix dimensions not compatible with multiplication")
@@ -202,51 +212,77 @@ public func inv(x : Matrix<Double>) -> Matrix<Double> {
     return results
 }
 
-public func transpose(x: Matrix<Float>) -> Matrix<Float> {
-    var results = Matrix<Float>(rows: x.columns, columns: x.rows, repeatedValue: 0.0)
-    vDSP_mtrans(x.grid, 1, &(results.grid), 1, vDSP_Length(results.rows), vDSP_Length(results.columns))
-
-    return results
-}
-
-public func transpose(x: Matrix<Double>) -> Matrix<Double> {
-    var results = Matrix<Double>(rows: x.columns, columns: x.rows, repeatedValue: 0.0)
-    vDSP_mtransD(x.grid, 1, &(results.grid), 1, vDSP_Length(results.rows), vDSP_Length(results.columns))
-
-    return results
-}
+//public func transpose(x: Matrix<Float>) -> Matrix<Float> {
+//    var results = Matrix<Float>(rows: x.columns, columns: x.rows, repeatedValue: 0.0)
+//    vDSP_mtrans(x.grid, 1, &(results.grid), 1, vDSP_Length(results.rows), vDSP_Length(results.columns))
+//
+//    return results
+//}
+//
+//public func transpose(x: Matrix<Double>) -> Matrix<Double> {
+//    var results = Matrix<Double>(rows: x.columns, columns: x.rows, repeatedValue: 0.0)
+//    vDSP_mtransD(x.grid, 1, &(results.grid), 1, vDSP_Length(results.rows), vDSP_Length(results.columns))
+//
+//    return results
+//}
 
 // MARK: - Operators
 
-public func + (lhs: Matrix<Float>, rhs: Matrix<Float>) -> Matrix<Float> {
-    return add(lhs, rhs)
-}
+//public func + (lhs: Matrix<Float>, rhs: Matrix<Float>) -> Matrix<Float> {
+//    return add(lhs, y: rhs)
+//}
+//
+//public func + (lhs: Matrix<Double>, rhs: Matrix<Double>) -> Matrix<Double> {
+//    assert(lhs.rows == rhs.rows && lhs.columns == rhs.columns)
+//    var matrix = Matrix(rows: lhs.rows, columns: lhs.columns, repeatedValue: 0.0)
+//    for i in 0..<lhs.rows {
+//        for j in 0..<lhs.columns {
+//            matrix[i,j] = lhs[i,j] + rhs[i,j]
+//        }
+//    }
+//    return matrix
+////    return add(lhs, y: rhs)
+//}
+//
+//public func - (lhs: Matrix<Double>, rhs: Matrix<Double>) -> Matrix<Double> {
+//    var matrix = Matrix(rows: lhs.rows, columns: lhs.columns, repeatedValue: 0.0)
+//    for i in 0..<lhs.rows {
+//        for j in 0..<lhs.columns {
+//            matrix[i,j] = lhs[i,j] - rhs[i,j]
+//        }
+//    }
+//    return matrix
+////    return add(lhs, y: rhs)
+//}
 
-public func + (lhs: Matrix<Double>, rhs: Matrix<Double>) -> Matrix<Double> {
-    return add(lhs, rhs)
-}
-
-public func * (lhs: Float, rhs: Matrix<Float>) -> Matrix<Float> {
-    return mul(lhs, rhs)
-}
-
-public func * (lhs: Double, rhs: Matrix<Double>) -> Matrix<Double> {
-    return mul(lhs, rhs)
-}
+//public func * (lhs: Float, rhs: Matrix<Float>) -> Matrix<Float> {
+//    return mul(lhs, x: rhs)
+//}
+//
+//public func * (lhs: Double, rhs: Matrix<Double>) -> Matrix<Double> {
+//    var matrix = Matrix(rows: rhs.rows, columns: rhs.columns, repeatedValue: 0.0)
+//    for i in 0..<rhs.rows {
+//        for j in 0..<rhs.columns {
+//            matrix[i,j] = lhs * rhs[i,j]
+//        }
+//    }
+//    return matrix
+////    return mul(lhs, x: rhs)
+//}
 
 public func * (lhs: Matrix<Float>, rhs: Matrix<Float>) -> Matrix<Float> {
-    return mul(lhs, rhs)
+    return mul(lhs, y: rhs)
 }
 
 public func * (lhs: Matrix<Double>, rhs: Matrix<Double>) -> Matrix<Double> {
-    return mul(lhs, rhs)
+    return mul(lhs, y: rhs)
 }
 
-postfix operator ′ {}
-public postfix func ′ (value: Matrix<Float>) -> Matrix<Float> {
-    return transpose(value)
-}
-
-public postfix func ′ (value: Matrix<Double>) -> Matrix<Double> {
-    return transpose(value)
-}
+//postfix operator ′ {}
+//public postfix func ′ (value: Matrix<Float>) -> Matrix<Float> {
+//    return transpose(value)
+//}
+//
+//public postfix func ′ (value: Matrix<Double>) -> Matrix<Double> {
+//    return transpose(value)
+//}

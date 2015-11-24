@@ -7,40 +7,44 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		8C0381A01BDA7C16000AE8E4 /* Shuffle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C03819F1BDA7C16000AE8E4 /* Shuffle.swift */; settings = {ASSET_TAGS = (); }; };
-		8C15BDD41BD06F8100C595BA /* Instance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C15BDD31BD06F8100C595BA /* Instance.swift */; settings = {ASSET_TAGS = (); }; };
-		8C15BDD61BD070E400C595BA /* InstanceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C15BDD51BD070E400C595BA /* InstanceTests.swift */; settings = {ASSET_TAGS = (); }; };
-		8C15BDD81BD0720600C595BA /* Classifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C15BDD71BD0720600C595BA /* Classifier.swift */; settings = {ASSET_TAGS = (); }; };
-		8C15BDDA1BD074C100C595BA /* ClassifierAccuracyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C15BDD91BD074C100C595BA /* ClassifierAccuracyTests.swift */; settings = {ASSET_TAGS = (); }; };
-		8C15BDDC1BD074EF00C595BA /* ClassifierBaseTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C15BDDB1BD074EF00C595BA /* ClassifierBaseTest.swift */; settings = {ASSET_TAGS = (); }; };
-		8C15BDDF1BD078CD00C595BA /* DataReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C15BDDE1BD078CD00C595BA /* DataReader.swift */; settings = {ASSET_TAGS = (); }; };
-		8C15BDE31BD07C0700C595BA /* speech.train in Resources */ = {isa = PBXBuildFile; fileRef = 8C15BDE21BD07C0700C595BA /* speech.train */; settings = {ASSET_TAGS = (); }; };
-		8C2BD21A1BCFEF94004E7302 /* MajorityClassifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C2BD2191BCFEF94004E7302 /* MajorityClassifier.swift */; settings = {ASSET_TAGS = (); }; };
-		8C2BD21D1BCFF0F1004E7302 /* FeatureVector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C2BD21C1BCFF0F1004E7302 /* FeatureVector.swift */; settings = {ASSET_TAGS = (); }; };
-		8C2BD2211BCFF417004E7302 /* FeatureVectorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C2BD2201BCFF417004E7302 /* FeatureVectorTests.swift */; settings = {ASSET_TAGS = (); }; };
-		8C3B37C11BDEB4A9005BEE8B /* mnist.test in Resources */ = {isa = PBXBuildFile; fileRef = 8C3B37BF1BDEB4A9005BEE8B /* mnist.test */; settings = {ASSET_TAGS = (); }; };
-		8C3B37C21BDEB4A9005BEE8B /* mnist.train in Resources */ = {isa = PBXBuildFile; fileRef = 8C3B37C01BDEB4A9005BEE8B /* mnist.train */; settings = {ASSET_TAGS = (); }; };
-		8C3B37C41BDEB561005BEE8B /* SwiftRandom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C3B37C31BDEB561005BEE8B /* SwiftRandom.swift */; settings = {ASSET_TAGS = (); }; };
-		8C3B37C61BDEB582005BEE8B /* NeuralNetworkClassifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C3B37C51BDEB582005BEE8B /* NeuralNetworkClassifier.swift */; settings = {ASSET_TAGS = (); }; };
-		8C3B37C81BDEB70D005BEE8B /* NeuralNetworkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C3B37C71BDEB70D005BEE8B /* NeuralNetworkTests.swift */; settings = {ASSET_TAGS = (); }; };
-		8C3B37D41BDFDD5A005BEE8B /* Arithmetic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C3B37CB1BDFDD5A005BEE8B /* Arithmetic.swift */; settings = {ASSET_TAGS = (); }; };
-		8C3B37D51BDFDD5A005BEE8B /* Auxiliary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C3B37CC1BDFDD5A005BEE8B /* Auxiliary.swift */; settings = {ASSET_TAGS = (); }; };
-		8C3B37D61BDFDD5A005BEE8B /* Exponential.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C3B37CD1BDFDD5A005BEE8B /* Exponential.swift */; settings = {ASSET_TAGS = (); }; };
-		8C3B37D71BDFDD5A005BEE8B /* FFT.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C3B37CE1BDFDD5A005BEE8B /* FFT.swift */; settings = {ASSET_TAGS = (); }; };
-		8C3B37D81BDFDD5A005BEE8B /* Hyperbolic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C3B37CF1BDFDD5A005BEE8B /* Hyperbolic.swift */; settings = {ASSET_TAGS = (); }; };
-		8C3B37D91BDFDD5A005BEE8B /* Matrix.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C3B37D01BDFDD5A005BEE8B /* Matrix.swift */; settings = {ASSET_TAGS = (); }; };
-		8C3B37DA1BDFDD5A005BEE8B /* Power.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C3B37D11BDFDD5A005BEE8B /* Power.swift */; settings = {ASSET_TAGS = (); }; };
-		8C3B37DC1BDFDD5A005BEE8B /* Trigonometric.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C3B37D31BDFDD5A005BEE8B /* Trigonometric.swift */; settings = {ASSET_TAGS = (); }; };
-		8C4072A41BDD813E00A23489 /* HashMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C4072A31BDD813E00A23489 /* HashMap.swift */; settings = {ASSET_TAGS = (); }; };
-		8C4072A61BDD839500A23489 /* HashMapTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C4072A51BDD839500A23489 /* HashMapTests.swift */; settings = {ASSET_TAGS = (); }; };
+		8C0381A01BDA7C16000AE8E4 /* Shuffle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C03819F1BDA7C16000AE8E4 /* Shuffle.swift */; };
+		8C15BDD41BD06F8100C595BA /* Instance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C15BDD31BD06F8100C595BA /* Instance.swift */; };
+		8C15BDD61BD070E400C595BA /* InstanceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C15BDD51BD070E400C595BA /* InstanceTests.swift */; };
+		8C15BDD81BD0720600C595BA /* Classifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C15BDD71BD0720600C595BA /* Classifier.swift */; };
+		8C15BDDA1BD074C100C595BA /* ClassifierAccuracyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C15BDD91BD074C100C595BA /* ClassifierAccuracyTests.swift */; };
+		8C15BDDC1BD074EF00C595BA /* ClassifierBaseTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C15BDDB1BD074EF00C595BA /* ClassifierBaseTest.swift */; };
+		8C15BDDF1BD078CD00C595BA /* DataReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C15BDDE1BD078CD00C595BA /* DataReader.swift */; };
+		8C15BDE31BD07C0700C595BA /* speech.train in Resources */ = {isa = PBXBuildFile; fileRef = 8C15BDE21BD07C0700C595BA /* speech.train */; };
+		8C1BE3E81C013E0600850E5D /* MNISTDataReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C1BE3E71C013E0600850E5D /* MNISTDataReader.swift */; };
+		8C2BD21A1BCFEF94004E7302 /* MajorityClassifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C2BD2191BCFEF94004E7302 /* MajorityClassifier.swift */; };
+		8C2BD21D1BCFF0F1004E7302 /* FeatureVector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C2BD21C1BCFF0F1004E7302 /* FeatureVector.swift */; };
+		8C2BD2211BCFF417004E7302 /* FeatureVectorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C2BD2201BCFF417004E7302 /* FeatureVectorTests.swift */; };
+		8C3B37C11BDEB4A9005BEE8B /* mnist.test in Resources */ = {isa = PBXBuildFile; fileRef = 8C3B37BF1BDEB4A9005BEE8B /* mnist.test */; };
+		8C3B37C21BDEB4A9005BEE8B /* mnist.train in Resources */ = {isa = PBXBuildFile; fileRef = 8C3B37C01BDEB4A9005BEE8B /* mnist.train */; };
+		8C3B37C41BDEB561005BEE8B /* SwiftRandom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C3B37C31BDEB561005BEE8B /* SwiftRandom.swift */; };
+		8C3B37C61BDEB582005BEE8B /* NeuralNetworkClassifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C3B37C51BDEB582005BEE8B /* NeuralNetworkClassifier.swift */; };
+		8C3B37C81BDEB70D005BEE8B /* NeuralNetworkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C3B37C71BDEB70D005BEE8B /* NeuralNetworkTests.swift */; };
+		8C3B37D41BDFDD5A005BEE8B /* Arithmetic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C3B37CB1BDFDD5A005BEE8B /* Arithmetic.swift */; };
+		8C3B37D51BDFDD5A005BEE8B /* Auxiliary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C3B37CC1BDFDD5A005BEE8B /* Auxiliary.swift */; };
+		8C3B37D61BDFDD5A005BEE8B /* Exponential.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C3B37CD1BDFDD5A005BEE8B /* Exponential.swift */; };
+		8C3B37D71BDFDD5A005BEE8B /* FFT.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C3B37CE1BDFDD5A005BEE8B /* FFT.swift */; };
+		8C3B37D81BDFDD5A005BEE8B /* Hyperbolic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C3B37CF1BDFDD5A005BEE8B /* Hyperbolic.swift */; };
+		8C3B37D91BDFDD5A005BEE8B /* Matrix.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C3B37D01BDFDD5A005BEE8B /* Matrix.swift */; };
+		8C3B37DA1BDFDD5A005BEE8B /* Power.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C3B37D11BDFDD5A005BEE8B /* Power.swift */; };
+		8C3B37DC1BDFDD5A005BEE8B /* Trigonometric.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C3B37D31BDFDD5A005BEE8B /* Trigonometric.swift */; };
+		8C4072A41BDD813E00A23489 /* HashMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C4072A31BDD813E00A23489 /* HashMap.swift */; };
+		8C4072A61BDD839500A23489 /* HashMapTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C4072A51BDD839500A23489 /* HashMapTests.swift */; };
 		8C8916C11BCFED4C00A77184 /* SwiftLearning.h in Headers */ = {isa = PBXBuildFile; fileRef = 8C8916C01BCFED4C00A77184 /* SwiftLearning.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		8C8916C81BCFED4D00A77184 /* SwiftLearning.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C8916BD1BCFED4C00A77184 /* SwiftLearning.framework */; settings = {ASSET_TAGS = (); }; };
-		8C9841F51BD08B1E0051CBEB /* AccuracyEvaluator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C9841F41BD08B1E0051CBEB /* AccuracyEvaluator.swift */; settings = {ASSET_TAGS = (); }; };
-		8C9841F71BD08C8B0051CBEB /* speech.test in Resources */ = {isa = PBXBuildFile; fileRef = 8C9841F61BD08C8B0051CBEB /* speech.test */; settings = {ASSET_TAGS = (); }; };
-		8C9841F91BD08EF40051CBEB /* EvenOddClassifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C9841F81BD08EF40051CBEB /* EvenOddClassifier.swift */; settings = {ASSET_TAGS = (); }; };
-		8C9842021BD184980051CBEB /* LogisticRegressionClassifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C9842011BD184980051CBEB /* LogisticRegressionClassifier.swift */; settings = {ASSET_TAGS = (); }; };
-		8C9842041BD184D60051CBEB /* FeatureMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C9842031BD184D60051CBEB /* FeatureMap.swift */; settings = {ASSET_TAGS = (); }; };
-		8CB1B3821BD6CBDD00CD474D /* PegasosClassifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CB1B3811BD6CBDD00CD474D /* PegasosClassifier.swift */; settings = {ASSET_TAGS = (); }; };
+		8C8916C81BCFED4D00A77184 /* SwiftLearning.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C8916BD1BCFED4C00A77184 /* SwiftLearning.framework */; };
+		8C9841F51BD08B1E0051CBEB /* AccuracyEvaluator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C9841F41BD08B1E0051CBEB /* AccuracyEvaluator.swift */; };
+		8C9841F71BD08C8B0051CBEB /* speech.test in Resources */ = {isa = PBXBuildFile; fileRef = 8C9841F61BD08C8B0051CBEB /* speech.test */; };
+		8C9841F91BD08EF40051CBEB /* EvenOddClassifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C9841F81BD08EF40051CBEB /* EvenOddClassifier.swift */; };
+		8C9842021BD184980051CBEB /* LogisticRegressionClassifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C9842011BD184980051CBEB /* LogisticRegressionClassifier.swift */; };
+		8C9842041BD184D60051CBEB /* FeatureMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C9842031BD184D60051CBEB /* FeatureMap.swift */; };
+		8C987E131BFE402F00943F7A /* SwiftLearning.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C8916BD1BCFED4C00A77184 /* SwiftLearning.framework */; };
+		8C987E141BFE402F00943F7A /* SwiftLearning.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8C8916BD1BCFED4C00A77184 /* SwiftLearning.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		8CB1B3821BD6CBDD00CD474D /* PegasosClassifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CB1B3811BD6CBDD00CD474D /* PegasosClassifier.swift */; };
+		8CB4714B1C02251200D9E26A /* Operators.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CB4714A1C02251200D9E26A /* Operators.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,7 +55,42 @@
 			remoteGlobalIDString = 8C8916BC1BCFED4C00A77184;
 			remoteInfo = SwiftLearning;
 		};
+		8C987DF91BFE3F5800943F7A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8C8916B41BCFED4C00A77184 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8C987DE41BFE3F5800943F7A;
+			remoteInfo = SwiftLearningTestApp;
+		};
+		8C987E041BFE3F5800943F7A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8C8916B41BCFED4C00A77184 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8C987DE41BFE3F5800943F7A;
+			remoteInfo = SwiftLearningTestApp;
+		};
+		8C987E151BFE402F00943F7A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8C8916B41BCFED4C00A77184 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8C8916BC1BCFED4C00A77184;
+			remoteInfo = SwiftLearning;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		8C987E171BFE402F00943F7A /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				8C987E141BFE402F00943F7A /* SwiftLearning.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		8C03819F1BDA7C16000AE8E4 /* Shuffle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Shuffle.swift; sourceTree = "<group>"; };
@@ -62,6 +101,7 @@
 		8C15BDDB1BD074EF00C595BA /* ClassifierBaseTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClassifierBaseTest.swift; sourceTree = "<group>"; };
 		8C15BDDE1BD078CD00C595BA /* DataReader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataReader.swift; sourceTree = "<group>"; };
 		8C15BDE21BD07C0700C595BA /* speech.train */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = speech.train; sourceTree = "<group>"; };
+		8C1BE3E71C013E0600850E5D /* MNISTDataReader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MNISTDataReader.swift; sourceTree = "<group>"; };
 		8C2BD2191BCFEF94004E7302 /* MajorityClassifier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MajorityClassifier.swift; sourceTree = "<group>"; };
 		8C2BD21C1BCFF0F1004E7302 /* FeatureVector.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeatureVector.swift; sourceTree = "<group>"; };
 		8C2BD2201BCFF417004E7302 /* FeatureVectorTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeatureVectorTests.swift; sourceTree = "<group>"; };
@@ -90,7 +130,11 @@
 		8C9841F81BD08EF40051CBEB /* EvenOddClassifier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EvenOddClassifier.swift; sourceTree = "<group>"; };
 		8C9842011BD184980051CBEB /* LogisticRegressionClassifier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogisticRegressionClassifier.swift; sourceTree = "<group>"; };
 		8C9842031BD184D60051CBEB /* FeatureMap.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeatureMap.swift; sourceTree = "<group>"; };
+		8C987DE51BFE3F5800943F7A /* SwiftLearningTestApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftLearningTestApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8C987DF81BFE3F5800943F7A /* SwiftLearningTestAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftLearningTestAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		8C987E031BFE3F5800943F7A /* SwiftLearningTestAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftLearningTestAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8CB1B3811BD6CBDD00CD474D /* PegasosClassifier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PegasosClassifier.swift; sourceTree = "<group>"; };
+		8CB4714A1C02251200D9E26A /* Operators.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Operators.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +150,28 @@
 			buildActionMask = 2147483647;
 			files = (
 				8C8916C81BCFED4D00A77184 /* SwiftLearning.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8C987DE21BFE3F5800943F7A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8C987E131BFE402F00943F7A /* SwiftLearning.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8C987DF51BFE3F5800943F7A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8C987E001BFE3F5800943F7A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -182,6 +248,9 @@
 			children = (
 				8C8916BD1BCFED4C00A77184 /* SwiftLearning.framework */,
 				8C8916C71BCFED4D00A77184 /* SwiftLearningTests.xctest */,
+				8C987DE51BFE3F5800943F7A /* SwiftLearningTestApp.app */,
+				8C987DF81BFE3F5800943F7A /* SwiftLearningTestAppTests.xctest */,
+				8C987E031BFE3F5800943F7A /* SwiftLearningTestAppUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -235,10 +304,12 @@
 		8C9842001BD1521D0051CBEB /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
-				8C15BDDE1BD078CD00C595BA /* DataReader.swift */,
 				8C3B37C91BDFDD37005BEE8B /* SwiftRandom */,
-				8C9841F41BD08B1E0051CBEB /* AccuracyEvaluator.swift */,
 				8C3B37CA1BDFDD51005BEE8B /* Surge */,
+				8C15BDDE1BD078CD00C595BA /* DataReader.swift */,
+				8CB4714A1C02251200D9E26A /* Operators.swift */,
+				8C1BE3E71C013E0600850E5D /* MNISTDataReader.swift */,
+				8C9841F41BD08B1E0051CBEB /* AccuracyEvaluator.swift */,
 				8C03819F1BDA7C16000AE8E4 /* Shuffle.swift */,
 			);
 			name = Utilities;
@@ -294,13 +365,68 @@
 			productReference = 8C8916C71BCFED4D00A77184 /* SwiftLearningTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		8C987DE41BFE3F5800943F7A /* SwiftLearningTestApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8C987E0A1BFE3F5800943F7A /* Build configuration list for PBXNativeTarget "SwiftLearningTestApp" */;
+			buildPhases = (
+				8C987DE11BFE3F5800943F7A /* Sources */,
+				8C987DE21BFE3F5800943F7A /* Frameworks */,
+				8C987DE31BFE3F5800943F7A /* Resources */,
+				8C987E171BFE402F00943F7A /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8C987E161BFE402F00943F7A /* PBXTargetDependency */,
+			);
+			name = SwiftLearningTestApp;
+			productName = SwiftLearningTestApp;
+			productReference = 8C987DE51BFE3F5800943F7A /* SwiftLearningTestApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+		8C987DF71BFE3F5800943F7A /* SwiftLearningTestAppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8C987E0D1BFE3F5800943F7A /* Build configuration list for PBXNativeTarget "SwiftLearningTestAppTests" */;
+			buildPhases = (
+				8C987DF41BFE3F5800943F7A /* Sources */,
+				8C987DF51BFE3F5800943F7A /* Frameworks */,
+				8C987DF61BFE3F5800943F7A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8C987DFA1BFE3F5800943F7A /* PBXTargetDependency */,
+			);
+			name = SwiftLearningTestAppTests;
+			productName = SwiftLearningTestAppTests;
+			productReference = 8C987DF81BFE3F5800943F7A /* SwiftLearningTestAppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		8C987E021BFE3F5800943F7A /* SwiftLearningTestAppUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8C987E101BFE3F5800943F7A /* Build configuration list for PBXNativeTarget "SwiftLearningTestAppUITests" */;
+			buildPhases = (
+				8C987DFF1BFE3F5800943F7A /* Sources */,
+				8C987E001BFE3F5800943F7A /* Frameworks */,
+				8C987E011BFE3F5800943F7A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8C987E051BFE3F5800943F7A /* PBXTargetDependency */,
+			);
+			name = SwiftLearningTestAppUITests;
+			productName = SwiftLearningTestAppUITests;
+			productReference = 8C987E031BFE3F5800943F7A /* SwiftLearningTestAppUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		8C8916B41BCFED4C00A77184 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0700;
+				LastSwiftUpdateCheck = 0710;
 				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = "Clayton Minicus";
 				TargetAttributes = {
@@ -310,6 +436,17 @@
 					8C8916C61BCFED4D00A77184 = {
 						CreatedOnToolsVersion = 7.0.1;
 					};
+					8C987DE41BFE3F5800943F7A = {
+						CreatedOnToolsVersion = 7.1.1;
+					};
+					8C987DF71BFE3F5800943F7A = {
+						CreatedOnToolsVersion = 7.1.1;
+						TestTargetID = 8C987DE41BFE3F5800943F7A;
+					};
+					8C987E021BFE3F5800943F7A = {
+						CreatedOnToolsVersion = 7.1.1;
+						TestTargetID = 8C987DE41BFE3F5800943F7A;
+					};
 				};
 			};
 			buildConfigurationList = 8C8916B71BCFED4C00A77184 /* Build configuration list for PBXProject "SwiftLearning" */;
@@ -318,6 +455,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
 			);
 			mainGroup = 8C8916B31BCFED4C00A77184;
 			productRefGroup = 8C8916BE1BCFED4C00A77184 /* Products */;
@@ -326,6 +464,9 @@
 			targets = (
 				8C8916BC1BCFED4C00A77184 /* SwiftLearning */,
 				8C8916C61BCFED4D00A77184 /* SwiftLearningTests */,
+				8C987DE41BFE3F5800943F7A /* SwiftLearningTestApp */,
+				8C987DF71BFE3F5800943F7A /* SwiftLearningTestAppTests */,
+				8C987E021BFE3F5800943F7A /* SwiftLearningTestAppUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -349,6 +490,27 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		8C987DE31BFE3F5800943F7A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8C987DF61BFE3F5800943F7A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8C987E011BFE3F5800943F7A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -359,6 +521,7 @@
 				8C3B37D41BDFDD5A005BEE8B /* Arithmetic.swift in Sources */,
 				8C9841F91BD08EF40051CBEB /* EvenOddClassifier.swift in Sources */,
 				8C3B37D51BDFDD5A005BEE8B /* Auxiliary.swift in Sources */,
+				8C1BE3E81C013E0600850E5D /* MNISTDataReader.swift in Sources */,
 				8C15BDD81BD0720600C595BA /* Classifier.swift in Sources */,
 				8C4072A41BDD813E00A23489 /* HashMap.swift in Sources */,
 				8C3B37C41BDEB561005BEE8B /* SwiftRandom.swift in Sources */,
@@ -372,6 +535,7 @@
 				8C9842041BD184D60051CBEB /* FeatureMap.swift in Sources */,
 				8C2BD21D1BCFF0F1004E7302 /* FeatureVector.swift in Sources */,
 				8C2BD21A1BCFEF94004E7302 /* MajorityClassifier.swift in Sources */,
+				8CB4714B1C02251200D9E26A /* Operators.swift in Sources */,
 				8C9842021BD184980051CBEB /* LogisticRegressionClassifier.swift in Sources */,
 				8C3B37D91BDFDD5A005BEE8B /* Matrix.swift in Sources */,
 				8C9841F51BD08B1E0051CBEB /* AccuracyEvaluator.swift in Sources */,
@@ -394,6 +558,27 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		8C987DE11BFE3F5800943F7A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8C987DF41BFE3F5800943F7A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8C987DFF1BFE3F5800943F7A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -401,6 +586,21 @@
 			isa = PBXTargetDependency;
 			target = 8C8916BC1BCFED4C00A77184 /* SwiftLearning */;
 			targetProxy = 8C8916C91BCFED4D00A77184 /* PBXContainerItemProxy */;
+		};
+		8C987DFA1BFE3F5800943F7A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8C987DE41BFE3F5800943F7A /* SwiftLearningTestApp */;
+			targetProxy = 8C987DF91BFE3F5800943F7A /* PBXContainerItemProxy */;
+		};
+		8C987E051BFE3F5800943F7A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8C987DE41BFE3F5800943F7A /* SwiftLearningTestApp */;
+			targetProxy = 8C987E041BFE3F5800943F7A /* PBXContainerItemProxy */;
+		};
+		8C987E161BFE402F00943F7A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8C8916BC1BCFED4C00A77184 /* SwiftLearning */;
+			targetProxy = 8C987E151BFE402F00943F7A /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -505,11 +705,12 @@
 				INFOPLIST_FILE = SwiftLearning/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				OTHER_SWIFT_FLAGS = "-O";
+				OTHER_CFLAGS = "";
+				OTHER_SWIFT_FLAGS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = com.claytonminicus.SwiftLearning;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 			};
 			name = Debug;
 		};
@@ -524,10 +725,12 @@
 				INFOPLIST_FILE = SwiftLearning/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				OTHER_SWIFT_FLAGS = "-O";
+				OTHER_CFLAGS = "";
+				OTHER_SWIFT_FLAGS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = com.claytonminicus.SwiftLearning;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 			};
 			name = Release;
 		};
@@ -548,6 +751,86 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.claytonminicus.SwiftLearningTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		8C987E0B1BFE3F5800943F7A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				INFOPLIST_FILE = SwiftLearningTestApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.claytonminicus.SwiftLearningTestApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		8C987E0C1BFE3F5800943F7A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				INFOPLIST_FILE = SwiftLearningTestApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.claytonminicus.SwiftLearningTestApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Release;
+		};
+		8C987E0E1BFE3F5800943F7A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = SwiftLearningTestAppTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.claytonminicus.SwiftLearningTestAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SwiftLearningTestApp.app/SwiftLearningTestApp";
+			};
+			name = Debug;
+		};
+		8C987E0F1BFE3F5800943F7A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = SwiftLearningTestAppTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.claytonminicus.SwiftLearningTestAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SwiftLearningTestApp.app/SwiftLearningTestApp";
+			};
+			name = Release;
+		};
+		8C987E111BFE3F5800943F7A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = SwiftLearningTestAppUITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.claytonminicus.SwiftLearningTestAppUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = SwiftLearningTestApp;
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		8C987E121BFE3F5800943F7A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = SwiftLearningTestAppUITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.claytonminicus.SwiftLearningTestAppUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = SwiftLearningTestApp;
+				USES_XCTRUNNER = YES;
 			};
 			name = Release;
 		};
@@ -577,6 +860,33 @@
 			buildConfigurations = (
 				8C8916D51BCFED4D00A77184 /* Debug */,
 				8C8916D61BCFED4D00A77184 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8C987E0A1BFE3F5800943F7A /* Build configuration list for PBXNativeTarget "SwiftLearningTestApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8C987E0B1BFE3F5800943F7A /* Debug */,
+				8C987E0C1BFE3F5800943F7A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8C987E0D1BFE3F5800943F7A /* Build configuration list for PBXNativeTarget "SwiftLearningTestAppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8C987E0E1BFE3F5800943F7A /* Debug */,
+				8C987E0F1BFE3F5800943F7A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8C987E101BFE3F5800943F7A /* Build configuration list for PBXNativeTarget "SwiftLearningTestAppUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8C987E111BFE3F5800943F7A /* Debug */,
+				8C987E121BFE3F5800943F7A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

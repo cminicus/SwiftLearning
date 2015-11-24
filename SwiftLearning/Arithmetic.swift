@@ -146,19 +146,34 @@ public func add(x: [Double], y: [Double]) -> [Double] {
 
 // MARK: Multiply
 
-public func mul(x: [Float], y: [Float]) -> [Float] {
-    var results = [Float](count: x.count, repeatedValue: 0.0)
-    vDSP_vmul(x, 1, y, 1, &results, 1, vDSP_Length(x.count))
+//public func mul(x: [Float], y: [Float]) -> [Float] {
+//    var results = [Float](count: x.count, repeatedValue: 0.0)
+//    vDSP_vmul(x, 1, y, 1, &results, 1, vDSP_Length(x.count))
+//
+//    return results
+//}
+//
+//public func mul(x: [Double], y: [Double]) -> [Double] {
+//    var results = [Double](count: x.count, repeatedValue: 0.0)
+//    vDSP_vmulD(x, 1, y, 1, &results, 1, vDSP_Length(x.count))
+//
+//    return results
+//}
 
-    return results
-}
-
-public func mul(x: [Double], y: [Double]) -> [Double] {
-    var results = [Double](count: x.count, repeatedValue: 0.0)
-    vDSP_vmulD(x, 1, y, 1, &results, 1, vDSP_Length(x.count))
-
-    return results
-}
+// Added by Clayton Minicus
+//public func mul(x: [Float], var y: Float) -> [Float] {
+//    var results = [Float](count: x.count, repeatedValue: 0.0)
+//    vDSP_vsmul(x, 1, &y, &results, 1, vDSP_Length(x.count))
+//    
+//    return results
+//}
+//
+//public func mul(x: [Double], var y: Double) -> [Double] {
+//    var results = [Double](count: x.count, repeatedValue: 0.0)
+//    vDSP_vsmulD(x, 1, &y, &results, 1, vDSP_Length(x.count))
+//    
+//    return results
+//}
 
 // MARK: Divide
 
@@ -224,36 +239,61 @@ public func sqrt(x: [Double]) -> [Double] {
     return results
 }
 
-// MARK: Dot Product
+//// MARK: Dot Product
+//
+//public func dot(x: [Float], y: [Float]) -> Float {
+//    precondition(x.count == y.count, "Vectors must have equal count")
+//
+//    var result: Float = 0.0
+//    vDSP_dotpr(x, 1, y, 1, &result, vDSP_Length(x.count))
+//
+//    return result
+//}
+//
+//
+//public func dot(x: [Double], y: [Double]) -> Double {
+//    precondition(x.count == y.count, "Vectors must have equal count")
+//
+//    var result: Double = 0.0
+//    vDSP_dotprD(x, 1, y, 1, &result, vDSP_Length(x.count))
+//
+//    return result
+//}
 
-public func dot(x: [Float], y: [Float]) -> Float {
-    precondition(x.count == y.count, "Vectors must have equal count")
+// Added by Clayton Minicus
+//public func matrixVectorDotProduct
+// catlas_caxpby
 
-    var result: Float = 0.0
-    vDSP_dotpr(x, 1, y, 1, &result, vDSP_Length(x.count))
-
-    return result
-}
-
-
-public func dot(x: [Double], y: [Double]) -> Double {
-    precondition(x.count == y.count, "Vectors must have equal count")
-
-    var result: Double = 0.0
-    vDSP_dotprD(x, 1, y, 1, &result, vDSP_Length(x.count))
-
-    return result
-}
+// row vector times column vector
+//infix operator ** {}
+//func ** (lhs: [Double], rhs: [Double]) -> Matrix<Double> {
+//    
+//    let m = Int32(lhs.count)
+//    let n = Int32(rhs.count)
+//    
+//    var ret = Matrix(rows: lhs.count, columns: rhs.count, repeatedValue: 0.0)
+//    cblas_dger(CblasRowMajor, m, n, 1, lhs, 1, rhs, 1, &(ret.grid), n)
+//    
+//    return ret
+//}
 
 // MARK: - Operators
 
-func + (lhs: [Float], rhs: [Float]) -> [Float] {
-    return add(lhs, y: rhs)
-}
+//func + (lhs: [Float], rhs: [Float]) -> [Float] {
+//    return add(lhs, y: rhs)
+//}
+//
+//func + (lhs: [Double], rhs: [Double]) -> [Double] {
+//    return add(lhs, y: rhs)
+//}
 
-func + (lhs: [Double], rhs: [Double]) -> [Double] {
-    return add(lhs, y: rhs)
-}
+//func - (lhs: [Float], rhs: [Float]) -> [Float] {
+//    return add(lhs, y: neg(rhs))
+//}
+//
+//func - (lhs: [Double], rhs: [Double]) -> [Double] {
+//    return add(lhs, y: neg(rhs))
+//}
 
 func + (lhs: [Float], rhs: Float) -> [Float] {
     return add(lhs, y: [Float](count: lhs.count, repeatedValue: rhs))
@@ -262,6 +302,14 @@ func + (lhs: [Float], rhs: Float) -> [Float] {
 func + (lhs: [Double], rhs: Double) -> [Double] {
     return add(lhs, y: [Double](count: lhs.count, repeatedValue: rhs))
 }
+
+//func - (lhs: Double, rhs: [Double]) -> [Double] {
+//    return add([Double](count: rhs.count, repeatedValue: lhs), y: neg(rhs))
+//}
+//
+//func - (lhs: Float, rhs: [Float]) -> [Float] {
+//    return add([Float](count: rhs.count, repeatedValue: lhs), y: neg(rhs))
+//}
 
 func / (lhs: [Float], rhs: [Float]) -> [Float] {
     return div(lhs, y: rhs)
@@ -279,21 +327,21 @@ func / (lhs: [Double], rhs: Double) -> [Double] {
     return div(lhs, y: [Double](count: lhs.count, repeatedValue: rhs))
 }
 
-func * (lhs: [Float], rhs: [Float]) -> [Float] {
-    return mul(lhs, y: rhs)
-}
+//func * (lhs: [Float], rhs: [Float]) -> [Float] {
+//    return mul(lhs, y: rhs)
+//}
+//
+//func * (lhs: [Double], rhs: [Double]) -> [Double] {
+//    return mul(lhs, y: rhs)
+//}
 
-func * (lhs: [Double], rhs: [Double]) -> [Double] {
-    return mul(lhs, y: rhs)
-}
-
-func * (lhs: [Float], rhs: Float) -> [Float] {
-    return mul(lhs, y: [Float](count: lhs.count, repeatedValue: rhs))
-}
-
-func * (lhs: [Double], rhs: Double) -> [Double] {
-    return mul(lhs, y: [Double](count: lhs.count, repeatedValue: rhs))
-}
+//func * (lhs: [Float], rhs: Float) -> [Float] {
+//    return mul(lhs, y: [Float](count: lhs.count, repeatedValue: rhs))
+//}
+//
+//func * (lhs: [Double], rhs: Double) -> [Double] {
+//    return mul(lhs, y: [Double](count: lhs.count, repeatedValue: rhs))
+//}
 
 func % (lhs: [Float], rhs: [Float]) -> [Float] {
     return mod(lhs, y: rhs)
@@ -311,11 +359,11 @@ func % (lhs: [Double], rhs: Double) -> [Double] {
     return mod(lhs, y: [Double](count: lhs.count, repeatedValue: rhs))
 }
 
-infix operator • {}
-func • (lhs: [Double], rhs: [Double]) -> Double {
-    return dot(lhs, y: rhs)
-}
-
-func • (lhs: [Float], rhs: [Float]) -> Float {
-    return dot(lhs, y: rhs)
-}
+//infix operator • {}
+//func • (lhs: [Double], rhs: [Double]) -> Double {
+//    return dot(lhs, y: rhs)
+//}
+//
+//func • (lhs: [Float], rhs: [Float]) -> Float {
+//    return dot(lhs, y: rhs)
+//}

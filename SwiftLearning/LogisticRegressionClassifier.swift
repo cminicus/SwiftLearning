@@ -149,15 +149,21 @@ public class LogisticRegressionClassifier: Classifier {
     - returns: The inner product
     */
     private func multiplyVectors(w: FeatureMap, vector: FeatureVector) -> Double {
-        var sum = 0.0
         let keys = vector.keyArray()
         
+        // here vector has all keys, w might not
+        let vectorValues = vector.valueArray()
+        var wValues = [Double]()
+        
         for key in keys {
-            let value = vector.get(key)!
-            let w_j = w.get(key) == nil ? 0 : w.get(key)!
-            
-            sum += (value * w_j)
+            let value = w.get(key)
+            if value != nil {
+                wValues.append(value!)
+            } else {
+                wValues.append(0.0)
+            }
         }
-        return sum
+        
+        return dot(vectorValues, y: wValues)
     }
 }

@@ -21,7 +21,7 @@ class HashMapTests: XCTestCase {
 
     */
     
-    func testHashMapGetSpeed() {
+    func DISABLED_testHashMapGetSpeed() {
         let hashMap = HashMap<Int, Double>()
         
         for i in 0..<10000 {
@@ -35,7 +35,7 @@ class HashMapTests: XCTestCase {
         }
     }
     
-    func testFeatureMapGetSpeed() {
+    func DISABLED_testFeatureMapGetSpeed() {
         let hashMap = FeatureMap()
         
         for i in 0..<10000 {
@@ -49,7 +49,7 @@ class HashMapTests: XCTestCase {
         }
     }
     
-    func testHashMapPutSpeed() {
+    func DISABLED_testHashMapPutSpeed() {
         let hashMap = HashMap<Int, Double>()
         
         self.measureBlock {
@@ -59,7 +59,7 @@ class HashMapTests: XCTestCase {
         }
     }
     
-    func testFeatureMapPutSpeed() {
+    func DISABLED_testFeatureMapPutSpeed() {
         let hashMap = FeatureMap()
         
         self.measureBlock {

@@ -157,6 +157,10 @@ public class PegasosClassifier: Classifier {
     private func innerProduct(w: [Double], vector: FeatureVector) -> Double {
         var sum = 0.0
         let wSize = w.count
+        // potentially use surge here? Filter the the vector or w so that 
+        // they only contain the values in each other (so if the vector does
+        // have key 2, then don't include that in w, and use the surge dot product
+        // function. Might be quicker??
         
         let keys = vector.keyArray()
         for key in keys {
@@ -166,5 +170,18 @@ public class PegasosClassifier: Classifier {
             }
         }
         return sum
+        
+        // jury is still out here
+//        var vectorValues = [Double]()
+//        for (index, _) in w.enumerate() {
+//            let value = vector.get(index)
+//            if value == nil {
+//                vectorValues.append(0.0)
+//            } else {
+//                vectorValues.append(value!)
+//            }
+//        }
+//        
+//        return dot(w, y: vectorValues)
     }
 }

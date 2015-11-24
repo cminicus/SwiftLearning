@@ -68,7 +68,11 @@ public class DataReader {
                     let keyAndValue = feature.componentsSeparatedByString(":")
                     let key = keyAndValue.first!
                     let value = keyAndValue.last!
-                    featureVector.add(Int(key)!, value: Double(value)!)
+                    if fileName == "mnist" {
+                        featureVector.add(Int(key)!, value: Double(value)! / 255.0)
+                    } else {
+                        featureVector.add(Int(key)!, value: Double(value)!)
+                    }
                 }
                 let instance = Instance(
                     featureVector: featureVector,
@@ -123,7 +127,12 @@ public class DataReader {
                     let keyAndValue = feature.componentsSeparatedByString(":")
                     let key = keyAndValue.first!
                     let value = keyAndValue.last!
-                    featureVector.add(Int(key)!, value: Double(value)!)
+                    if fileName == "mnist" {
+                        featureVector.add(Int(key)!, value: Double(value)! / 255.0)
+                    } else {
+                        featureVector.add(Int(key)!, value: Double(value)!)
+                    }
+                    
                 }
                 instances.append(Instance(featureVector: featureVector, label: label))
                 print(Float(instances.count) / Float(contentArray.count) * 100)

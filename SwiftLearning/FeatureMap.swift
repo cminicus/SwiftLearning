@@ -33,6 +33,8 @@ internal class FeatureMap {
     
     /// Internal list of keys for quick access
     private var keys: [Int]
+    /// Internal list of values for quick access
+    private var values: [Double]
     
     /// True if FeatureMap should sort on it's own, false if the data is pre sorted
     var preSortedData = false
@@ -45,6 +47,7 @@ internal class FeatureMap {
     init() {
         map  = [(Int, Double)]()
         keys = [Int]()
+        values = [Double]()
     }
     
     /**
@@ -60,11 +63,13 @@ internal class FeatureMap {
             if currentKey > key {
                 map.insert((key, value), atIndex: currentIndex)
                 keys.insert(key, atIndex: currentIndex)
+                values.insert(value, atIndex: currentIndex)
                 return
             }
         }
         map.append((key, value))
         keys.append(key)
+        values.append(value)
     }
     
     /**
@@ -78,6 +83,7 @@ internal class FeatureMap {
         if preSortedData {
             map.append((key, value))
             keys.append(key)
+            values.append(value)
         } else {
             addSorted(key, value: value)
         }
@@ -90,6 +96,15 @@ internal class FeatureMap {
     */
     func keyArray() -> [Int] {
         return keys
+    }
+    
+    /**
+    Gets all the values in the feature vector
+    
+    - returns: Array of values sorted by corresponding key
+    */
+    func valueArray() -> [Double] {
+        return values
     }
     
     /**
@@ -120,6 +135,7 @@ internal class FeatureMap {
             if key == mapKey {
                 map[i] = (key, value)
                 keys[i] = key
+                values[i] = value
                 return
             }
             i++
