@@ -32,6 +32,12 @@ public class FeatureVector {
     /// Internal FeatureMap to hold key, value pairs
     private var map: FeatureMap
     
+    public var valueArray: [Double] {
+        didSet(newValue) {
+            map.values = newValue
+        }
+    }
+    
     /// Option to turn off internal sorting, allowing faster add speeds
     public var preSortedData = false {
         didSet(value) {
@@ -46,6 +52,7 @@ public class FeatureVector {
     */
     public init() {
         map = FeatureMap()
+        valueArray = []
     }
     
     /**
@@ -73,9 +80,9 @@ public class FeatureVector {
     
     - returns: Array of values sorted by corresponding key
     */
-    public func valueArray() -> [Double] {
-        return map.valueArray()
-    }
+//    public func valueArray() -> [Double] {
+//        return map.valueArray()
+//    }
     
     /**
     Gets a value for the given key from the feature vector

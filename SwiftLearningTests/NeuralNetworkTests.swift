@@ -12,13 +12,18 @@ import XCTest
 class NeuralNetworkTests: XCTestCase {
     
     func testThatNeuralNetworkOperatesCorrection() {
-        let dataReader = DataReader(fileName: "mnist-full")
-        let trainInstances = dataReader.readTrainData()
-        let testInstances = dataReader.readTestData()
+//        let dataReader = DataReader(fileName: "mnist-full")
+//        let trainInstances = dataReader.readTrainData()
+//        let testInstances = dataReader.readTestData()
         
-//        let train = MNISTDataReader.readTrainData()
+        let allTrainInstances = MNISTDataReader.readTrainData()
+        let trainInstances = Array(allTrainInstances[0..<50000])
+        let validationInstances = Array(allTrainInstances[50000..<60000])
         
+        let testInstances = MNISTDataReader.readTestData()
         let network = NeuralNetworkClassifier(layers: [784, 30, 10])
-        network.trainAndEvaluate(trainInstances, evaluation: testInstances)
+        
+        network.trainAndEvaluate(trainInstances, evaluation: validationInstances)
+        network.evaluate(testInstances)
     }
 }

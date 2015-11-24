@@ -45,6 +45,10 @@
 		8C987E141BFE402F00943F7A /* SwiftLearning.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8C8916BD1BCFED4C00A77184 /* SwiftLearning.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		8CB1B3821BD6CBDD00CD474D /* PegasosClassifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CB1B3811BD6CBDD00CD474D /* PegasosClassifier.swift */; };
 		8CB4714B1C02251200D9E26A /* Operators.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CB4714A1C02251200D9E26A /* Operators.swift */; };
+		8CE6AEFF1C0400B00070C3DA /* images.test in Resources */ = {isa = PBXBuildFile; fileRef = 8CE6AEFB1C0400B00070C3DA /* images.test */; };
+		8CE6AF001C0400B00070C3DA /* labels.test in Resources */ = {isa = PBXBuildFile; fileRef = 8CE6AEFC1C0400B00070C3DA /* labels.test */; };
+		8CE6AF011C0400B00070C3DA /* images.train in Resources */ = {isa = PBXBuildFile; fileRef = 8CE6AEFD1C0400B00070C3DA /* images.train */; };
+		8CE6AF021C0400B00070C3DA /* labels.train in Resources */ = {isa = PBXBuildFile; fileRef = 8CE6AEFE1C0400B00070C3DA /* labels.train */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -135,6 +139,10 @@
 		8C987E031BFE3F5800943F7A /* SwiftLearningTestAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftLearningTestAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8CB1B3811BD6CBDD00CD474D /* PegasosClassifier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PegasosClassifier.swift; sourceTree = "<group>"; };
 		8CB4714A1C02251200D9E26A /* Operators.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Operators.swift; sourceTree = "<group>"; };
+		8CE6AEFB1C0400B00070C3DA /* images.test */ = {isa = PBXFileReference; lastKnownFileType = file; name = images.test; path = SwiftLearning/images.test; sourceTree = "<group>"; };
+		8CE6AEFC1C0400B00070C3DA /* labels.test */ = {isa = PBXFileReference; lastKnownFileType = file; name = labels.test; path = SwiftLearning/labels.test; sourceTree = "<group>"; };
+		8CE6AEFD1C0400B00070C3DA /* images.train */ = {isa = PBXFileReference; lastKnownFileType = file; name = images.train; path = SwiftLearning/images.train; sourceTree = "<group>"; };
+		8CE6AEFE1C0400B00070C3DA /* labels.train */ = {isa = PBXFileReference; lastKnownFileType = file; name = labels.train; path = SwiftLearning/labels.train; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -204,6 +212,10 @@
 		8C3B37BC1BDEB190005BEE8B /* MNIST */ = {
 			isa = PBXGroup;
 			children = (
+				8CE6AEFB1C0400B00070C3DA /* images.test */,
+				8CE6AEFC1C0400B00070C3DA /* labels.test */,
+				8CE6AEFD1C0400B00070C3DA /* images.train */,
+				8CE6AEFE1C0400B00070C3DA /* labels.train */,
 				8C3B37BF1BDEB4A9005BEE8B /* mnist.test */,
 				8C3B37C01BDEB4A9005BEE8B /* mnist.train */,
 			);
@@ -477,8 +489,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				8C15BDE31BD07C0700C595BA /* speech.train in Resources */,
+				8CE6AF001C0400B00070C3DA /* labels.test in Resources */,
+				8CE6AF021C0400B00070C3DA /* labels.train in Resources */,
 				8C9841F71BD08C8B0051CBEB /* speech.test in Resources */,
 				8C3B37C21BDEB4A9005BEE8B /* mnist.train in Resources */,
+				8CE6AEFF1C0400B00070C3DA /* images.test in Resources */,
+				8CE6AF011C0400B00070C3DA /* images.train in Resources */,
 				8C3B37C11BDEB4A9005BEE8B /* mnist.test in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

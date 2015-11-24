@@ -152,7 +152,7 @@ public class LogisticRegressionClassifier: Classifier {
         let keys = vector.keyArray()
         
         // here vector has all keys, w might not
-        let vectorValues = vector.valueArray()
+        let vectorValues = vector.valueArray
         var wValues = [Double]()
         
         for key in keys {

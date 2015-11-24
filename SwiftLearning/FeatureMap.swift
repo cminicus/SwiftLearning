@@ -34,7 +34,7 @@ internal class FeatureMap {
     /// Internal list of keys for quick access
     private var keys: [Int]
     /// Internal list of values for quick access
-    private var values: [Double]
+    internal var values: [Double]
     
     /// True if FeatureMap should sort on it's own, false if the data is pre sorted
     var preSortedData = false

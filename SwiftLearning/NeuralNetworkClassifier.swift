@@ -113,7 +113,7 @@ public class NeuralNetworkClassifier: Classifier {
                 let slice = Array(instances[k..<(k + batchSize)])
                 miniBatches.append(slice)
             }
-            
+
             for miniBatch in miniBatches {
                 updateMiniBatch(miniBatch, totalInstances: instances.count)
             }
@@ -163,7 +163,7 @@ public class NeuralNetworkClassifier: Classifier {
         var biasGradient = initializeBiases(false)
         var weightGradient = initializeWeights(false)
         
-        var activation = instance.featureVector.valueArray()
+        var activation = instance.featureVector.valueArray
         var activations = [activation]
         var zs = [[Double]]() // z vectors, layer by layer
         
@@ -203,13 +203,13 @@ public class NeuralNetworkClassifier: Classifier {
         var correct = 0
         let total = instances.count
         for instance in instances {
-            let output = feedForward(instance.featureVector.valueArray())
+            let output = feedForward(instance.featureVector.valueArray)
             let predicition = convertArrayToLabel(output)
             if predicition == instance.label {
                 correct++
             }
         }
-        print(Double(correct) / Double(total) * 100)
+        print("Correct: \(Double(correct) / Double(total) * 100)")
     }
     
     private func cost(activations: [Double], label: Int) -> [Double] {
